@@ -19,10 +19,6 @@ Welcome to the Adept framework by Eon Collective, a powerful tool for data migra
 - `CTE_ORDER_PAYMENTS_FCT_1`: This is a Others node, placeholder descriptions` file in the `nodes/` directory.
 - `CTE_PAYMENTS_1`: This is a Others node, placeholder descriptions` file in the `nodes/` directory.
 - `CTE_PAYMENTS_FCT_1`: This is a Others node, placeholder descriptions` file in the `nodes/` directory.
-- `DBT_GGITHIRI-FCT_CUSTOMERS_ORDERS`: This is a Others node, placeholder descriptions` file in the `nodes/` directory.
-- `DBT_GGITHIRI-STG_CUSTOMERS`: This is a Others node, placeholder descriptions` file in the `nodes/` directory.
-- `DBT_GGITHIRI-STG_ORDERS`: This is a Others node, placeholder descriptions` file in the `nodes/` directory.
-- `DBT_GGITHIRI-STG_PAYMENT`: This is a Others node, placeholder descriptions` file in the `nodes/` directory.
 - `DIM_CUSTOMERS`: This is a dimension node, placeholder descriptions` file in the `nodes/` directory.
 - `DIM_CUSTOMERS_RS_1`: This is a dimension node, placeholder descriptions` file in the `nodes/` directory.
 - `DIM_CUSTOMERS_RS_2`: This is a dimension node, placeholder descriptions` file in the `nodes/` directory.
@@ -39,14 +35,11 @@ Welcome to the Adept framework by Eon Collective, a powerful tool for data migra
 - `INT_ORDERS_PIVOTED_RS_1`: This is a intermediate node, placeholder descriptions` file in the `nodes/` directory.
 - `INT_ORDERS_PIVOTED_RS_2`: This is a intermediate node, placeholder descriptions` file in the `nodes/` directory.
 - `INT_ORDERS_PIVOTED_RS_3`: This is a intermediate node, placeholder descriptions` file in the `nodes/` directory.
-- `JAFFLE_SHOP-CUSTOMERS`: This is a Others node, placeholder descriptions` file in the `nodes/` directory.
-- `JAFFLE_SHOP-ORDERS`: This is a Others node, placeholder descriptions` file in the `nodes/` directory.
 - `JAFFLE_SHOP_CUSTOMERS`: This is a Others node, placeholder descriptions` file in the `nodes/` directory.
 - `JAFFLE_SHOP_ORDERS`: This is a Others node, placeholder descriptions` file in the `nodes/` directory.
 - `STG_CUSTOMERS`: This is a Others node, placeholder descriptions` file in the `nodes/` directory.
 - `STG_ORDERS`: This is a Others node, placeholder descriptions` file in the `nodes/` directory.
 - `STG_PAYMENTS`: This is a Others node, placeholder descriptions` file in the `nodes/` directory.
-- `STRIPE-PAYMENT`: This is a Others node, placeholder descriptions` file in the `nodes/` directory.
 - `STRIPE_PAYMENT`: This is a Others node, placeholder descriptions` file in the `nodes/` directory.
     ## :book: Node Types in `data.yml` :book:
 
