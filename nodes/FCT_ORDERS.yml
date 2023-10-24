@@ -100,7 +100,7 @@ steps:
             values: []
           appliedColumnTests:
           columnReference:
-            columnCounter: 09dd932b-2916-4c6d-8c34-d6f63561baf9
+            columnCounter: ba112d8c-07de-4c95-927f-f99fe26e108e
             stepCounter: a21a7e188d9c2be2c051a7834970555c59c4540010813551a16775fa1c2e16a1
           config:
           dataType: TIMESTAMP
@@ -118,7 +118,7 @@ steps:
             values: []
           appliedColumnTests:
           columnReference:
-            columnCounter: 09dd932b-2916-4c6d-8c34-d6f63561baf9
+            columnCounter: ba112d8c-07de-4c95-927f-f99fe26e108e
             stepCounter: a21a7e188d9c2be2c051a7834970555c59c4540010813551a16775fa1c2e16a1
           config:
           dataType: TIMESTAMP
