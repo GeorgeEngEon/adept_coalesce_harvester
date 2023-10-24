@@ -1,0 +1,151 @@
+steps:
+  FCT_ORDERS-f92642aa14f0be52ef127daafa901793a77c5ed926b4ff6a94686427f86d845f:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationName: DBT_GGITHIRI
+      materializationType: Table
+      metadata:
+        appliedNodeTests: []
+        columns: 
+        - acceptedValues:
+            strictMatch: true
+            values: []
+          appliedColumnTests:
+            hasNull: false
+            isDistinct: true
+          columnReference:
+            columnCounter: 3d9d91fae96ef8c010b8b6031bc478fb804004c1d52d776e07f32bfb37b499e1
+            stepCounter: f92642aa14f0be52ef127daafa901793a77c5ed926b4ff6a94686427f86d845f
+          dataType: ""
+          description: ""
+          hashColumns: []
+          hashDetails: null
+          name: ORDER_ID
+          nullable: false
+          sourceColumnReferences:
+          - columnReferences:
+            - columnCounter: 4b6602a62ee3962cc116248bb01ed4b5627cb3e82569a9f4b88f0d7aa2d3f92f
+              stepCounter: fd50cf4dee9a9f1786e7d54f1257386dc8ecc73ca5d088776fe19e4d76ab81a5
+            transform: "" 
+        - acceptedValues:
+            strictMatch: true
+            values: []
+          appliedColumnTests:
+            hasNull: true
+            isDistinct: false
+          columnReference:
+            columnCounter: df778b1e6577bab98b4fb880e9cc40bd4659b8ef1e093707e7d04ff081068e95
+            stepCounter: f92642aa14f0be52ef127daafa901793a77c5ed926b4ff6a94686427f86d845f
+          dataType: ""
+          description: ""
+          hashColumns: []
+          hashDetails: null
+          name: AMOUNT
+          nullable: false
+          sourceColumnReferences:
+          - columnReferences:
+            - columnCounter: daf603ac7d7cce17de7452a26ca2a70b0e8e694a8fcaa30acd649133315f38b1
+              stepCounter: fd50cf4dee9a9f1786e7d54f1257386dc8ecc73ca5d088776fe19e4d76ab81a5
+            transform: "" 
+        - acceptedValues:
+            strictMatch: true
+            values: []
+          appliedColumnTests:
+            hasNull: true
+            isDistinct: false
+          columnReference:
+            columnCounter: b718599bdb456e3f882bc7bd6921738676abfb77971c87cf48caf6ac204a9b6e
+            stepCounter: f92642aa14f0be52ef127daafa901793a77c5ed926b4ff6a94686427f86d845f
+          dataType: ""
+          description: ""
+          hashColumns: []
+          hashDetails: null
+          name: CUSTOMER_ID
+          nullable: false
+          sourceColumnReferences:
+          - columnReferences:
+            - columnCounter: 15e16f1c039719a5832273378e32ab6b5ce2488307dbb163d58e885a5ffa2e42
+              stepCounter: None
+            transform: "" 
+        - acceptedValues:
+            strictMatch: true
+            values: []
+          appliedColumnTests:
+            hasNull: true
+            isDistinct: false
+          columnReference:
+            columnCounter: c280ec178a62917360e62c9c53b70a1b5b66b647eda9fb34cbaf07327ebbfc98
+            stepCounter: f92642aa14f0be52ef127daafa901793a77c5ed926b4ff6a94686427f86d845f
+          dataType: ""
+          description: ""
+          hashColumns: []
+          hashDetails: null
+          name: ORDER_DATE
+          nullable: false
+          sourceColumnReferences:
+          - columnReferences:
+            - columnCounter: d391789cefffb3092814a3d5a9fffd97d54600f45c95251d2ba3bf653bf17bec
+              stepCounter: None
+            transform: ""
+        - acceptedValues:
+            strictMatch: true
+            values: []
+          appliedColumnTests:
+          columnReference:
+            columnCounter: 3c79a9a6-9522-4d31-96d9-bd2f521b73ba
+            stepCounter: f92642aa14f0be52ef127daafa901793a77c5ed926b4ff6a94686427f86d845f
+          config:
+          dataType: TIMESTAMP
+          defaultValue: ""
+          description: ""
+          hashColumns: []
+          isSystemCreateDate: true
+          name: SYSTEM_CREATE_DATE
+          nullable: true
+          sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+        - acceptedValues:
+            strictMatch: true
+            values: []
+          appliedColumnTests:
+          columnReference:
+            columnCounter: 3c79a9a6-9522-4d31-96d9-bd2f521b73ba
+            stepCounter: f92642aa14f0be52ef127daafa901793a77c5ed926b4ff6a94686427f86d845f
+          config:
+          dataType: TIMESTAMP
+          defaultValue: ""
+          description: ""
+          hashColumns: []
+          isSystemUpdateDate: true
+          name: SYSTEM_UPDATE_DATE
+          nullable: true
+          sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+        - customSQL:
+            customSQL: ""
+          dependencies:
+          - locationName: DBT_GGITHIRI
+            nodeName: CTE_ORDER_PAYMENTS_FCT_1
+          join:
+            joinCondition: FROM { ref(DBT_GGITHIRI, CTE_ORDER_PAYMENTS_FCT_1) } "CTE_ORDER_PAYMENTS_FCT_1"
+          name: FCT_ORDERS
+          noLinkRefs: []
+      name: FCT_ORDERS
+      overrideSQL: false
+      schema: ""
+      sqlType: Fact
+      type: sql
+    stepCounter: f92642aa14f0be52ef127daafa901793a77c5ed926b4ff6a94686427f86d845f
