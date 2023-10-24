@@ -25,7 +25,106 @@ locations:
       '3':
         database: ''
         schema: ''
-macros: {}
+macros:
+  Macro-expression_is_true:
+    id: expression_is_true
+    macroString: |-
+      {% macro expression_is_true(node, expression, column_name=None) %}
+      
+      SELECT
+          *
+      FROM {{ node }}
+      {% if column_name is none %}
+      WHERE NOT ({{ expression }})
+      {%- else %}
+      WHERE NOT ({{ column_name }} {{ expression }})
+      {%- endif %}
+      
+      {% endmacro %}
+  Macro-equal_rowcount:
+    id: equal_rowcount
+    macroString: |-
+      {% macro equal_rowcount(node, compare_node, group_by_columns=[]) %}
+      
+      {% if group_by_columns %}
+        {% set select_gb_cols = group_by_columns|join(', ') + ', ' %}
+        {% set join_gb_cols = [] %}
+        {% for c in group_by_columns %}
+          {% set join_gb_cols = join_gb_cols + ["and a." + c + " = b." + c] %}
+        {% endfor %}
+        {% set join_gb_cols = join_gb_cols|join(' ') %}
+        {% set groupby_gb_cols = 'group by ' + group_by_columns|join(',') %}
+      {% else %}
+        {% set select_gb_cols = '' %}
+        {% set join_gb_cols = '' %}
+        {% set groupby_gb_cols = '' %}
+      {% endif %}
+      
+      {# We must add a fake join key in case additional grouping variables are not provided #}
+      {% set group_by_columns = ['id_equal_rowcount'] + group_by_columns %}
+      {% set groupby_gb_cols = 'group by ' + group_by_columns|join(',') %}
+      
+      with a as (
+          select 
+            {{ select_gb_cols }}
+            1 as id_equal_rowcount,
+            count(*) as count_a 
+          from {{ node }}
+          {{ groupby_gb_cols }}
+      ),
+      
+      b as (
+          select 
+            {{ select_gb_cols }}
+            1 as id_equal_rowcount,
+            count(*) as count_b 
+          from {{ compare_node }}
+          {{ groupby_gb_cols }}
+      ),
+      
+      final as (
+          select
+              {% for c in group_by_columns %}
+                a.{{ c }} as {{ c }}_a,
+                b.{{ c }} as {{ c }}_b,
+              {% endfor %}
+              count_a,
+              count_b,
+              abs(count_a - count_b) as diff_count
+          from a
+          full join b
+          on
+          a.id_equal_rowcount = b.id_equal_rowcount
+          {{ join_gb_cols }}
+      )
+      select * from final
+      
+      {% endmacro %}
+  Macro-not_empty_string:
+    id: not_empty_string
+    macroString: |-
+      {% macro not_empty_string(node, column_name, trim_whitespace=True) %}
+      
+      WITH all_values AS (
+          SELECT 
+              {% if trim_whitespace %}
+                  TRIM({{ column_name }}) AS {{ column_name }}
+              {% else %}
+                  {{ column_name }}
+              {% endif %}
+          FROM {{ node }}
+      ),
+      
+      errors AS (
+          SELECT * 
+          FROM all_values
+          WHERE {{ column_name }} = ''
+      )
+      
+      SELECT * FROM errors
+      
+      {% endmacro %}
+
 packages: {}
 projects: {}
 stepTypes:
@@ -374,7 +473,7 @@ stepTypes:
             attributeName: testsEnabled
             type: toggleButton
             default: true
-
+            
           - displayName: Pre-SQL
             attributeName: preSQL
             type: textBox
@@ -498,11 +597,11 @@ stepTypes:
 
             {% if node.materializationType == 'table' %}
 
-            	{% if config.preSQL %}
+            	{% if config.preSQL %}			
             		{{ stage('Pre-SQL') }}
             		{{ config.preSQL }}
             	{% endif %}
-
+            	
                 {% if is_type_2 %}
 
                     {% for source in sources %}
@@ -606,57 +705,73 @@ stepTypes:
                                 )
                             {% endif %}
                         {% endfor %}
-                        UNION ALL
-                        /* Rows Needing To Be Updated Due To Changes To Non-Type-2 source.columns
-                        This case merges only when there are changes in non-type-2 column updates, but no changes in type-2 columns*/
-                        SELECT
-                        {%- for col in source.columns if not col.isSurrogateKey %}
-                            {% if col.isSystemVersion or col.isSystemCreateDate or col.isSystemStartDate or col.isSystemEndDate %}
-                                "DIM"."{{ col.name }}"
-                            {% elif col.isSystemCurrentFlag %}
-                                'Y'
-                            {% else %}
-                                {{ get_source_transform(col) }}
-                            {% endif %}
-                            AS "{{ col.name }}",
-                        {% endfor -%}
-                            'UPDATE_NON_TYPE2_ROWS' AS "DML_OPERATION"
-                        {{ source.join }}
-                        INNER JOIN {{ ref_no_link(node.location.name, node.name) }} "DIM" ON
-                        {% for col in source.columns if col.isBusinessKey -%}
-                            {% if not loop.first %}
-                                AND
-                            {% endif %}
-                            {{ get_source_transform(col) }} = "DIM"."{{ col.name }}"
-                        {% endfor %}
-                        WHERE "DIM"."{{ get_value_by_column_attribute("isSystemCurrentFlag") }}" = 'Y'
-                        AND (
-                        {% for col in source.columns if (col.isChangeTracking) -%}
-                            {% if not loop.first %}
-                                AND
-                            {% endif %}
-                            {{ get_source_transform(col) }} = "DIM"."{{ col.name }}"
-                        {% endfor %} )
-                        {% for col in source.columns if not (   col.isBusinessKey or
-                                                                col.isChangeTracking or
-                                                                col.isSurrogateKey or
-                                                                col.isSystemVersion or
-                                                                col.isSystemCurrentFlag or
-                                                                col.isSystemStartDate or
-                                                                col.isSystemEndDate or
-                                                                col.isSystemUpdateDate or
-                                                                col.isSystemCreateDate) -%}
-                            {% if loop.first %}
-                                AND (
-                            {% endif %}
-                            {% if not loop.first %}
-                                OR
-                            {% endif %}
-                            NVL( CAST({{ get_source_transform(col) }} as STRING), '**NULL**') <> NVL( CAST("DIM"."{{ col.name }}" as STRING), '**NULL**')
-                            {% if loop.last %}
-                                )
-                            {% endif %}
-                        {% endfor %}
+                        {# The if-block below avoids unnecessary updates when no type 2 column changes are present #}
+                        {% if source.columns 
+                            | rejectattr('isSurrogateKey')
+                            | rejectattr('isBusinessKey')
+                            | rejectattr('isChangeTracking')
+                            | rejectattr('isSystemVersion')
+                            | rejectattr('isSystemCurrentFlag')
+                            | rejectattr('isSystemStartDate')
+                            | rejectattr('isSystemEndDate')
+                            | rejectattr('isSystemCreateDate')
+                            | rejectattr('isSystemUpdateDate') 
+                            | list | length == 0 
+                        %}
+                            {# Skip Section #}
+                        {% else %}
+                          UNION ALL
+                          /* Rows Needing To Be Updated Due To Changes To Non-Type-2 columns
+                          This case merges only when there are changes in non-type-2 column updates, but no changes in type-2 columns*/
+                          SELECT
+                          {%- for col in source.columns if not col.isSurrogateKey %}
+                              {% if col.isSystemVersion or col.isSystemCreateDate or col.isSystemStartDate or col.isSystemEndDate %}
+                                  "DIM"."{{ col.name }}"
+                              {% elif col.isSystemCurrentFlag %}
+                                  'Y'
+                              {% else %}
+                                  {{ get_source_transform(col) }}
+                              {% endif %}
+                              AS "{{ col.name }}",
+                          {% endfor -%}
+                              'UPDATE_NON_TYPE2_ROWS' AS "DML_OPERATION"
+                          {{ source.join }}
+                          INNER JOIN {{ ref_no_link(node.location.name, node.name) }} "DIM" ON
+                          {% for col in source.columns if col.isBusinessKey -%}
+                              {% if not loop.first %}
+                                  AND
+                              {% endif %}
+                              {{ get_source_transform(col) }} = "DIM"."{{ col.name }}"
+                          {% endfor %}
+                          WHERE "DIM"."{{ get_value_by_column_attribute("isSystemCurrentFlag") }}" = 'Y'
+                          AND (
+                          {% for col in source.columns if (col.isChangeTracking) -%}
+                              {% if not loop.first %}
+                                  AND
+                              {% endif %}
+                              {{ get_source_transform(col) }} = "DIM"."{{ col.name }}"
+                          {% endfor %} )
+                          {% for col in source.columns if not (   col.isBusinessKey or
+                                                                  col.isChangeTracking or
+                                                                  col.isSurrogateKey or
+                                                                  col.isSystemVersion or
+                                                                  col.isSystemCurrentFlag or
+                                                                  col.isSystemStartDate or
+                                                                  col.isSystemEndDate or
+                                                                  col.isSystemUpdateDate or
+                                                                  col.isSystemCreateDate) -%}
+                              {% if loop.first %}
+                                  AND (
+                              {% endif %}
+                              {% if not loop.first %}
+                                  OR
+                              {% endif %}
+                              NVL( CAST({{ get_source_transform(col) }} as STRING), '**NULL**') <> NVL( CAST("DIM"."{{ col.name }}" as STRING), '**NULL**')
+                              {% if loop.last %}
+                                  )
+                              {% endif %}
+                          {% endfor %}
+                        {% endif %}
                     ) AS "SRC"
                     ON
                     {% for col in source.columns if col.isBusinessKey -%}
@@ -759,8 +874,8 @@ stepTypes:
                         )
                     {% endfor %}
                 {% endif %}
-
-            	{% if config.postSQL %}
+            	
+            	{% if config.postSQL %}			
             		{{ stage('Post-SQL') }}
             		{{ config.postSQL }}
             	{% endif %}
