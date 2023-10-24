@@ -1,0 +1,136 @@
+steps:
+  CTE_CUSTOMER_ORDERS_DIM_1-3fd68c3b5f59849e38a00208ae8cc084b9e3b79fc70e188bc442c0bfc0afc307:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: true
+      locationName: DBT_GGITHIRI
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 27e992e42f5ab32dd4401c8d8eb2bab7b88d3c7597fb7b88d46ac8917b94119a
+              stepCounter: 3fd68c3b5f59849e38a00208ae8cc084b9e3b79fc70e188bc442c0bfc0afc307
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CUSTOMER_ID
+            nullable: false
+            sourceColumnReferences:
+            - columnReferences:
+              - columnCounter: 1ee8cfaac3da3b87385e0e4aaaed86a85b00845a5035cc92dd191867b82f38fa
+                stepCounter: None
+              transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 0712da05a93b3a104a0ed5509ffd4b43788ef0fffca43b5ad12af17c0ba3f59b
+              stepCounter: 3fd68c3b5f59849e38a00208ae8cc084b9e3b79fc70e188bc442c0bfc0afc307
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: FIRST_ORDER_DATE
+            nullable: false
+            sourceColumnReferences:
+            - columnReferences:
+              - columnCounter: 348a830fee0833d7e89a1694cffa96d5c8fb59b03384a929baff99ea0b35270e
+                stepCounter: None
+              transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 9661ec328b2b2a837ccb47f6f280cd174352e60e1a6cfa7c693cb42650545d7b
+              stepCounter: 3fd68c3b5f59849e38a00208ae8cc084b9e3b79fc70e188bc442c0bfc0afc307
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LIFETIME_VALUE
+            nullable: false
+            sourceColumnReferences:
+            - columnReferences:
+              - columnCounter: c29c77bee309b8772fefa2e2b835c48aa73484cd9f532fd7322b4b754bd7f443
+                stepCounter: None
+              transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 9970e868bd1a5eb547c5f941de50fd1fb36c9e834739b4e1e4f06f356978807f
+              stepCounter: 3fd68c3b5f59849e38a00208ae8cc084b9e3b79fc70e188bc442c0bfc0afc307
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: MOST_RECENT_ORDER_DATE
+            nullable: false
+            sourceColumnReferences:
+            - columnReferences:
+              - columnCounter: 6d2af864e027e4d3422f6cd1b6fe5b8ce022f64da11e1295a7bb7dd464d4c55a
+                stepCounter: None
+              transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 548594b6fbd6b13c49b58ce448aafa0fab0569f8a432f1e5085877b60e2fe210
+              stepCounter: 3fd68c3b5f59849e38a00208ae8cc084b9e3b79fc70e188bc442c0bfc0afc307
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: NUMBER_OF_ORDERS
+            nullable: false
+            sourceColumnReferences:
+            - columnReferences:
+              - columnCounter: cb228823d65009a6913e11914e5c476605906c1a18cd7fc89f1edb656b907f62
+                stepCounter: None
+              transform: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DBT_GGITHIRI
+                nodeName: DIM_CUSTOMERS_RS_3
+            join:
+                joinCondition: FROM {{ ref('DBT_GGITHIRI', 'DIM_CUSTOMERS_RS_3') }} "DIM_CUSTOMERS_RS_3"
+            name: CTE_CUSTOMER_ORDERS_DIM_1
+            noLinkRefs: []
+      name: CTE_CUSTOMER_ORDERS_DIM_1
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 3fd68c3b5f59849e38a00208ae8cc084b9e3b79fc70e188bc442c0bfc0afc307
