@@ -1,0 +1,96 @@
+steps:
+  STG_ORDERS-dacd5a3579a0f3d08cd006afb0e56e6397896fe4e388f94f13f9aa1fe58c7a8f:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: true
+      locationName: DBT_GGITHIRI
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: false
+              isDistinct: true
+            columnReference:
+              columnCounter: b7bbe3c77799440cb57282bd6bdc7c3c2af01eabcdd08d7d76ef4e8cf3d4cf9b
+              stepCounter: dacd5a3579a0f3d08cd006afb0e56e6397896fe4e388f94f13f9aa1fe58c7a8f
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CUSTOMER_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c67970469e7978fd99e46b9a755ea6b8251301031a54061293874d0493754b10
+                    stepCounter: babcde7a00923dfe54e9b7c82e2226673c24f7a78b6756cadb3de30dc7e5842e
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: false
+              isDistinct: true
+            columnReference:
+              columnCounter: ffa2767e7f84f39709d2f17a149296ead388d4c8f896ef32e809a4f1d76250c9
+              stepCounter: dacd5a3579a0f3d08cd006afb0e56e6397896fe4e388f94f13f9aa1fe58c7a8f
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ORDER_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f78075c47a51c4de919a0e576adf0ea85c79ec6b77aaf0c843e395bbc621d5b8
+                    stepCounter: babcde7a00923dfe54e9b7c82e2226673c24f7a78b6756cadb3de30dc7e5842e
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 74b2c31aafee68bed6b8f314c5b89e19b81967a4ef0945611de9f95ff6815bd7
+              stepCounter: dacd5a3579a0f3d08cd006afb0e56e6397896fe4e388f94f13f9aa1fe58c7a8f
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ORDER_DATE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bc9698350cca685d73b226d492fc124e3cf415a300b6fa8ef298bf0227a74009
+                    stepCounter: babcde7a00923dfe54e9b7c82e2226673c24f7a78b6756cadb3de30dc7e5842e
+                transform: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: JAFFLE_SHOP
+                nodeName: ORDERS
+            join:
+                joinCondition: FROM {{ ref('JAFFLE_SHOP', 'ORDERS') }} "ORDERS"
+            name: STG_ORDERS
+            noLinkRefs: []
+      name: STG_ORDERS
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: dacd5a3579a0f3d08cd006afb0e56e6397896fe4e388f94f13f9aa1fe58c7a8f
