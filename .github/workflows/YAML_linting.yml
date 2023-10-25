@@ -3,12 +3,12 @@ name: YAML Linting
 on:
   push:
     paths:
-    - '**/*.yml'
-    - '**/*.yaml'
+      - '**/*.yml'
+      - '**/*.yaml'
   pull_request:
     paths:
-    - '**/*.yml'
-    - '**/*.yaml'
+      - '**/*.yml'
+      - '**/*.yaml'
 
 jobs:
   lint:
@@ -24,5 +24,6 @@ jobs:
 
     - name: Lint YAML files
       run: |
-        yamllint . --format=parsable --line-length=120
+        echo "line-length: 120" > .yamllint
+        yamllint . --config-file .yamllint --format=parsable 
       shell: bash
