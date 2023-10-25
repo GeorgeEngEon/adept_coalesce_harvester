@@ -23,5 +23,5 @@ jobs:
       shell: bash
 
     - name: Lint YAML files
-      run: "yamllint . --format=parsable \n"
+      run: yamllint . --format=parsable
       shell: bash
