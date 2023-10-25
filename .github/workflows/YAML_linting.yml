@@ -1,7 +1,11 @@
-name: YAML Linting and Auto-fix
+name: YAML Linting
 
 on:
   push:
+    paths:
+      - '**/*.yml'
+      - '**/*.yaml'
+  pull_request:
     paths:
       - '**/*.yml'
       - '**/*.yaml'
@@ -13,19 +17,12 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Install yamllint and Git
+    - name: Install yamllint
       run: |
         pip install yamllint
-        apt-get update && apt-get install -y git
       shell: bash
 
-    - name: Lint and Auto-fix YAML files
+    - name: Lint YAML files
       run: |
-        yamllint -f fix .
-        git diff --exit-code || git commit -am "Auto-fix YAML linting issues"
-      shell: bash
-
-    - name: Push changes (if any)
-      run: |
-        git push
+        yamllint . --format=parsable
       shell: bash
