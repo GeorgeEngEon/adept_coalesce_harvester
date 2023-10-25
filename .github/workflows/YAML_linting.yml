@@ -24,5 +24,6 @@ jobs:
 
     - name: Lint YAML files
       run: |
-        yamllint -d "line-length max=120" . --format=parsable
+        echo "line-length: 120" > .yamllint
+        yamllint . --config-file .yamllint --format=parsable
       shell: bash
