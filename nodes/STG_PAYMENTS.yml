@@ -1,0 +1,136 @@
+steps:
+  STG_PAYMENTS-8cff41de79c325762dba29b6e6370bea47e12d2da8ebfcd6e8df4e4bd234a932:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: true
+      locationName: DBT_GGITHIRI
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: false
+              isDistinct: true
+            columnReference:
+              columnCounter: d95199676f31ad58c3aacfc6bbec7911f578659f22f5ea8ade7e7fcfe71b921a
+              stepCounter: 8cff41de79c325762dba29b6e6370bea47e12d2da8ebfcd6e8df4e4bd234a932
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PAYMENT_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c8c220b843fbc79a1d0c2dca2419f69a2b695afc903490e62b950f23e589bd29
+                    stepCounter: 8e77da2ce2d5a037042944b854629317662b3b820b2353258215e3bd584ff3b6
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: a99f907c48fa36698643495d945c6e0b75ab18872ffa60e2643dc4d88816e241
+              stepCounter: 8cff41de79c325762dba29b6e6370bea47e12d2da8ebfcd6e8df4e4bd234a932
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: AMOUNT
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5b333f0ded3f357c76375adc70f1332ee5c6295efe1aa2c44fe4d82290ea01f1
+                    stepCounter: 8e77da2ce2d5a037042944b854629317662b3b820b2353258215e3bd584ff3b6
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: f109492f68622382227a45dfb92c3d642f76f91e0f8eaacb14e90c865baba74c
+              stepCounter: 8cff41de79c325762dba29b6e6370bea47e12d2da8ebfcd6e8df4e4bd234a932
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ORDER_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 36e0c665d0a30b7565f7e0f58093f97ea625f9be55f23801148479019026f2be
+                    stepCounter: 8e77da2ce2d5a037042944b854629317662b3b820b2353258215e3bd584ff3b6
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 703af0d92fc70925a4d24cec5bda3c6dae8d87f64f52627363942a8026f20c52
+              stepCounter: 8cff41de79c325762dba29b6e6370bea47e12d2da8ebfcd6e8df4e4bd234a932
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: STATUS
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f0ce21205a609f0143bc216eac5c258791952cfddc03048247ecd00e993502de
+                    stepCounter: 8e77da2ce2d5a037042944b854629317662b3b820b2353258215e3bd584ff3b6
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: c4017393a42f71e8fc8505444803bbfa576c07cda976f3c847cbf13632062b1f
+              stepCounter: 8cff41de79c325762dba29b6e6370bea47e12d2da8ebfcd6e8df4e4bd234a932
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PAYMENT_METHOD
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 570284dfa5565e6c81c98fd8ed479fc01ef45b540f0547b182986c8e4f79de6a
+                    stepCounter: 8e77da2ce2d5a037042944b854629317662b3b820b2353258215e3bd584ff3b6
+                transform: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STRIPE
+                nodeName: PAYMENT
+            join:
+                joinCondition: FROM {{ ref('STRIPE', 'PAYMENT') }} "PAYMENT"
+            name: STG_PAYMENTS
+            noLinkRefs: []
+      name: STG_PAYMENTS
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 8cff41de79c325762dba29b6e6370bea47e12d2da8ebfcd6e8df4e4bd234a932
