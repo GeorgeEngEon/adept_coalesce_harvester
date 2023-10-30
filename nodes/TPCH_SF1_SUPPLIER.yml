@@ -1,0 +1,36 @@
+steps:
+  SUPPLIER-49925b2f0072546d7317e2e0f4d6b9b3a3e6c210fa21011f39a43fe3fc273a83:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: TPCH_SF1
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: b80173df34d1e575c953ee4d81eb015ebb273f4ba0d0466366537fa1f874c22d
+              stepCounter: 49925b2f0072546d7317e2e0f4d6b9b3a3e6c210fa21011f39a43fe3fc273a83
+            config: 
+            dataType: 
+            defaultValue: ""
+            description: ""
+            name: *
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM { ref(f'TPCH_SF1', 'SUPPLIER') }
+      name: SUPPLIER
+      schema: ""
+      sqlType: Source
+      table: SUPPLIER
+      type: sourceInput
+    stepCounter: 49925b2f0072546d7317e2e0f4d6b9b3a3e6c210fa21011f39a43fe3fc273a83
