@@ -1,0 +1,736 @@
+steps:
+  STG_LINEITEM_ORDERS_DIM_LOOKUP-1e308119ff48fe19d5b71c567a6415bc1687265394b04eb1f3f831f36bb4dbff:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: true
+      locationName: DBT_JANEROSE
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 131412271c327dff9c26f09bee9f315f02b7c12ddf1bf4fa88e2931b79dadd45
+              stepCounter: 1e308119ff48fe19d5b71c567a6415bc1687265394b04eb1f3f831f36bb4dbff
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: string indices must be integers
+                    stepCounter: No Source Step id
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 1b9a07e711b31bf2ad99a357dfee8aa9b6ac99d5237a471b0e0f44fc5ddb6ad3
+              stepCounter: 1e308119ff48fe19d5b71c567a6415bc1687265394b04eb1f3f831f36bb4dbff
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: O_ORDERSTATUS
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: string indices must be integers
+                    stepCounter: No Source Step id
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 817223cee36eac4c6cf49360d94a109f897cad70a7d901267593d6e1d9efae91
+              stepCounter: 1e308119ff48fe19d5b71c567a6415bc1687265394b04eb1f3f831f36bb4dbff
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: L_TAX
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: string indices must be integers
+                    stepCounter: No Source Step id
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: bf9d9d942a0e372ee180c756085a213b4ce91afcdfe54146b1df8ed677fad191
+              stepCounter: 1e308119ff48fe19d5b71c567a6415bc1687265394b04eb1f3f831f36bb4dbff
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: L_COMMITDATE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: string indices must be integers
+                    stepCounter: No Source Step id
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: d7c09c3db20c720d27eeaaae0f73cfb1739363665c052c7e7de53950fbefabbb
+              stepCounter: 1e308119ff48fe19d5b71c567a6415bc1687265394b04eb1f3f831f36bb4dbff
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: O_ORDERKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: string indices must be integers
+                    stepCounter: No Source Step id
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: f46c10efd6def21e4a7d38efbdc790ca1f88ac41a47b7d737d8c0e48d3ab1705
+              stepCounter: 1e308119ff48fe19d5b71c567a6415bc1687265394b04eb1f3f831f36bb4dbff
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: O_TOTALPRICE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: string indices must be integers
+                    stepCounter: No Source Step id
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 9760f6a8120342a87529919a60c5ffb01f0b6986c284019d9946db47e2d92bc8
+              stepCounter: 1e308119ff48fe19d5b71c567a6415bc1687265394b04eb1f3f831f36bb4dbff
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: string indices must be integers
+                    stepCounter: No Source Step id
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: b8fe0a43e18ea9ca756e1d377cc5bc4508c466825424e88c0380c50de2b408ef
+              stepCounter: 1e308119ff48fe19d5b71c567a6415bc1687265394b04eb1f3f831f36bb4dbff
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: L_ORDERKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: string indices must be integers
+                    stepCounter: No Source Step id
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 1fa10924224b6a6e26e74674bed8f0cfc41710da378f049357200fbe37f0b1e2
+              stepCounter: 1e308119ff48fe19d5b71c567a6415bc1687265394b04eb1f3f831f36bb4dbff
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: L_LINESTATUS
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: string indices must be integers
+                    stepCounter: No Source Step id
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 28f26d3f6c775b73663a03bda3feb87dae678ecc4dcd786442b61690205c8b01
+              stepCounter: 1e308119ff48fe19d5b71c567a6415bc1687265394b04eb1f3f831f36bb4dbff
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: O_COMMENT
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: string indices must be integers
+                    stepCounter: No Source Step id
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: f75e7707795974a8b00713fffbd870f22ede0d8bd6af485854562cc50d50db11
+              stepCounter: 1e308119ff48fe19d5b71c567a6415bc1687265394b04eb1f3f831f36bb4dbff
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: L_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: string indices must be integers
+                    stepCounter: No Source Step id
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: f95a8eee03525976859d48fad23d5e81a39be3cab3c808b530fd3cf44cabd1cb
+              stepCounter: 1e308119ff48fe19d5b71c567a6415bc1687265394b04eb1f3f831f36bb4dbff
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: string indices must be integers
+                    stepCounter: No Source Step id
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: d1684168b9f06c157bdbb408e7577804e119e22209b152e159d2bad71aa1d2eb
+              stepCounter: 1e308119ff48fe19d5b71c567a6415bc1687265394b04eb1f3f831f36bb4dbff
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: L_LINENUMBER
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: string indices must be integers
+                    stepCounter: No Source Step id
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 72f4185f664b2ff38452fb60c1f744154f0e994190cfc987ac3c2b26ab7df17b
+              stepCounter: 1e308119ff48fe19d5b71c567a6415bc1687265394b04eb1f3f831f36bb4dbff
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: DIM_CUSTOMER_KEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: string indices must be integers
+                    stepCounter: No Source Step id
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: f8eb1547264e96b61b53057b7c70535f386ed0f617a6d8dcf520b4fe5dbae737
+              stepCounter: 1e308119ff48fe19d5b71c567a6415bc1687265394b04eb1f3f831f36bb4dbff
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: L_COMMENT
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: string indices must be integers
+                    stepCounter: No Source Step id
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 8047a937e3f8ce5c928e9e59b9d99eab1a482bfbdbaa6d79137500fd9ec4aa50
+              stepCounter: 1e308119ff48fe19d5b71c567a6415bc1687265394b04eb1f3f831f36bb4dbff
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: L_QUANTITY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: string indices must be integers
+                    stepCounter: No Source Step id
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 8f060fb0a5658fc5007d68e274231c41c77f68b76fe9c123836ccfedb00d588d
+              stepCounter: 1e308119ff48fe19d5b71c567a6415bc1687265394b04eb1f3f831f36bb4dbff
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: L_SHIPMODE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: string indices must be integers
+                    stepCounter: No Source Step id
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 4f2efbb1869cde89657fd8346c8d5f5d82b3e0dd2a3ed08b382437ea9eae6706
+              stepCounter: 1e308119ff48fe19d5b71c567a6415bc1687265394b04eb1f3f831f36bb4dbff
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: O_ORDERPRIORITY_NUM
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: string indices must be integers
+                    stepCounter: No Source Step id
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: c5cfb86f5e0c3b4e8ed9b9bb2e0582d6776a8a5654c6b99ec24f59fd40543360
+              stepCounter: 1e308119ff48fe19d5b71c567a6415bc1687265394b04eb1f3f831f36bb4dbff
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: L_EXTENDEDPRICE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: string indices must be integers
+                    stepCounter: No Source Step id
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: f22cb434738a2002d81ae245108f766f726749050f9f0fcc89ad217d115f4f37
+              stepCounter: 1e308119ff48fe19d5b71c567a6415bc1687265394b04eb1f3f831f36bb4dbff
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: string indices must be integers
+                    stepCounter: No Source Step id
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 686bbb8a573476b9de955b35b12abf3018a5c59f1c53294d9bf2a3ec7ce2df84
+              stepCounter: 1e308119ff48fe19d5b71c567a6415bc1687265394b04eb1f3f831f36bb4dbff
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: string indices must be integers
+                    stepCounter: No Source Step id
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: bd93ab63217c87058f5a7299555ce2ee206d116a543a22beaefd982cdf6315dd
+              stepCounter: 1e308119ff48fe19d5b71c567a6415bc1687265394b04eb1f3f831f36bb4dbff
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: O_CUSTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: string indices must be integers
+                    stepCounter: No Source Step id
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 9b2d707b4abbace0bc223bd10a8a34956552c838c4a9da94e6f575d4df0f5b38
+              stepCounter: 1e308119ff48fe19d5b71c567a6415bc1687265394b04eb1f3f831f36bb4dbff
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: O_ORDERPRIORITY_DESC
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: string indices must be integers
+                    stepCounter: No Source Step id
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 9dee66a634bf77a8a0a7e1902743082a8a87a8248476ec9553473da8e549d802
+              stepCounter: 1e308119ff48fe19d5b71c567a6415bc1687265394b04eb1f3f831f36bb4dbff
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: DAYSTOSHIP
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: string indices must be integers
+                    stepCounter: No Source Step id
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: d85d9831f24e99154af87f67637ac2468f313a156e4d2cc4cb45b1071ebf61c7
+              stepCounter: 1e308119ff48fe19d5b71c567a6415bc1687265394b04eb1f3f831f36bb4dbff
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: O_SHIPPRIORITY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: string indices must be integers
+                    stepCounter: No Source Step id
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: b9e64f318762c63e9546d802bad8e530cdf27a89cf0c79cba5b0249a07254b6f
+              stepCounter: 1e308119ff48fe19d5b71c567a6415bc1687265394b04eb1f3f831f36bb4dbff
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: L_RETURNFLAG
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: string indices must be integers
+                    stepCounter: No Source Step id
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 7c099340d64ee922bc8a7713640e6b63ac5c615150006386f4a4b9207f1bab4a
+              stepCounter: 1e308119ff48fe19d5b71c567a6415bc1687265394b04eb1f3f831f36bb4dbff
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: O_ORDERDATE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: string indices must be integers
+                    stepCounter: No Source Step id
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: f52df05ba2c9d4fdc5ec87b7eaa6994b332e7c07ef12f36bfcf8df0b49b021bc
+              stepCounter: 1e308119ff48fe19d5b71c567a6415bc1687265394b04eb1f3f831f36bb4dbff
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: L_RECEIPTDATE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: string indices must be integers
+                    stepCounter: No Source Step id
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 91b2127d017d0d9caeef8a103dc750ef01030a01513a8dc9ba449ff11d4dfd1e
+              stepCounter: 1e308119ff48fe19d5b71c567a6415bc1687265394b04eb1f3f831f36bb4dbff
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: DIM_SUPPLIER_KEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: string indices must be integers
+                    stepCounter: No Source Step id
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: df21845124e7c99f1d3c26e235a85ecd53d850aa7378e3076d5fd7795d48d5fc
+              stepCounter: 1e308119ff48fe19d5b71c567a6415bc1687265394b04eb1f3f831f36bb4dbff
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: L_SHIPDATE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: string indices must be integers
+                    stepCounter: No Source Step id
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: d3d884ba5019f97694dc576d9a6871136b8440ce93b2d2085f766644ca180a62
+              stepCounter: 1e308119ff48fe19d5b71c567a6415bc1687265394b04eb1f3f831f36bb4dbff
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: L_SHIPINSTRUCT
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: string indices must be integers
+                    stepCounter: No Source Step id
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 7dc208232f4f5b107a4360ddef43deca3ea2c77e0151bd7cb072c1284c78b963
+              stepCounter: 1e308119ff48fe19d5b71c567a6415bc1687265394b04eb1f3f831f36bb4dbff
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: DIM_PARTSUPP_KEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: string indices must be integers
+                    stepCounter: No Source Step id
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 82b71377e79f1545db42c8307cdb3aea277f7d5fed70fcc93ad859c1780e96be
+              stepCounter: 1e308119ff48fe19d5b71c567a6415bc1687265394b04eb1f3f831f36bb4dbff
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: L_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: string indices must be integers
+                    stepCounter: No Source Step id
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 62d564e01e41ffba5fc2c925000fb44aef9231aebc1e9bfd7e32a309e75796be
+              stepCounter: 1e308119ff48fe19d5b71c567a6415bc1687265394b04eb1f3f831f36bb4dbff
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: L_DISCOUNT
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: string indices must be integers
+                    stepCounter: No Source Step id
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 526ff0fe2eb2452f3494ba0b33dc38d471e27d7b0f92135d1434bce66fb7c95e
+              stepCounter: 1e308119ff48fe19d5b71c567a6415bc1687265394b04eb1f3f831f36bb4dbff
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: O_CLERK
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: string indices must be integers
+                    stepCounter: No Source Step id
+                transform: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: No Source Model
+                nodeName: No Source Name
+            join:
+                joinCondition: FROM {{ ref('No Source Model', 'No Source Name') }} "No Source Name"
+            name: STG_LINEITEM_ORDERS_DIM_LOOKUP
+            noLinkRefs: []
+      name: STG_LINEITEM_ORDERS_DIM_LOOKUP
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 1e308119ff48fe19d5b71c567a6415bc1687265394b04eb1f3f831f36bb4dbff
