@@ -1,0 +1,136 @@
+steps:
+  STG_PARTSUPP-982fd064ac7bd74dbcba1ea0e179c86440e52a67e89c451686daea5ea958b91d:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: true
+      locationName: DBT_JANEROSE
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 57ea45a514d26e4bb99886627e09feaa4163bd7754f4e921fee544d1a7cad641
+              stepCounter: 982fd064ac7bd74dbcba1ea0e179c86440e52a67e89c451686daea5ea958b91d
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 38090aa0fb30888b7b4ac2993a7bc9f2c810cba7b2d307ec20b8100b5d00a299
+                    stepCounter: c275af467c98ed33e41b0af6c78211ce1a3fe2e950fbc54fae19484b9bd636e8
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: false
+              isDistinct: false
+            columnReference:
+              columnCounter: 8c8a97e39550e6b7bf417be3ebb46b8a98475285152d2d9866c55cfebec930a1
+              stepCounter: 982fd064ac7bd74dbcba1ea0e179c86440e52a67e89c451686daea5ea958b91d
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 595cf40ce68c1eef4f4d030d584a83f2cd75d866c2855855109324e4eb7dc5e0
+                    stepCounter: c275af467c98ed33e41b0af6c78211ce1a3fe2e950fbc54fae19484b9bd636e8
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: false
+              isDistinct: false
+            columnReference:
+              columnCounter: 7ff3981875d9682e11d8fcc521484cad2c8f6ac71e4fcbf7c7f4f90630b5c505
+              stepCounter: 982fd064ac7bd74dbcba1ea0e179c86440e52a67e89c451686daea5ea958b91d
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b48a283e72925ba2614fca2a0b528cad7827ce7fb7b39bcd4ded758ecaed7b5d
+                    stepCounter: c275af467c98ed33e41b0af6c78211ce1a3fe2e950fbc54fae19484b9bd636e8
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: false
+              isDistinct: false
+            columnReference:
+              columnCounter: 44d796245c289f6b3e31c4acb9c2dde9d4a9ffc943ef66157f0fae488cef153c
+              stepCounter: 982fd064ac7bd74dbcba1ea0e179c86440e52a67e89c451686daea5ea958b91d
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ab826b9422ff9abcdcaa817d945a3c095d6f2d60d89c04a2dde5939717360370
+                    stepCounter: c275af467c98ed33e41b0af6c78211ce1a3fe2e950fbc54fae19484b9bd636e8
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: false
+              isDistinct: false
+            columnReference:
+              columnCounter: 8fe15459656632b3dd6fc80ddbfd3dd9a41ff47ea6076790c83654d9dc9c94aa
+              stepCounter: 982fd064ac7bd74dbcba1ea0e179c86440e52a67e89c451686daea5ea958b91d
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0cb63b166ffcfa004e91f2a9ca5a58be75ca10955cb116ae34f034baab75c5b5
+                    stepCounter: c275af467c98ed33e41b0af6c78211ce1a3fe2e950fbc54fae19484b9bd636e8
+                transform: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TPCH_SF1
+                nodeName: PARTSUPP
+            join:
+                joinCondition: FROM {{ ref('TPCH_SF1', 'PARTSUPP') }} "PARTSUPP"
+            name: STG_PARTSUPP
+            noLinkRefs: []
+      name: STG_PARTSUPP
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 982fd064ac7bd74dbcba1ea0e179c86440e52a67e89c451686daea5ea958b91d

@@ -1,0 +1,216 @@
+steps:
+  STG_ORDERS-e45746cb8566d30e43506391a0abd8ab50046b76d335a5595c3193dc524b95d2:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: true
+      locationName: DBT_JANEROSE
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: false
+              isDistinct: false
+            columnReference:
+              columnCounter: 748224804053c69093c66af60a76e7a97ddd15e8311a611b1868d616f1a0e8e3
+              stepCounter: e45746cb8566d30e43506391a0abd8ab50046b76d335a5595c3193dc524b95d2
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: O_ORDERDATE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 00c1d15946bec201966c796c4abff5bfaf284e12de816b0c7a49391daefa4f05
+                    stepCounter: b933b6f9a1370d37bb2c9cbf0a1a8a951badf1ec744f40ade565dd5841c0986d
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: fe8214ca1543497e7ce1dc713a5e29cd37abf0f78324aa40f6747836eb44d1dc
+              stepCounter: e45746cb8566d30e43506391a0abd8ab50046b76d335a5595c3193dc524b95d2
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: O_COMMENT
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9b49fbfac87f3f98ce2f05c9dcf2a22290827e114b47e84164bd7d576c4c41a9
+                    stepCounter: b933b6f9a1370d37bb2c9cbf0a1a8a951badf1ec744f40ade565dd5841c0986d
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: false
+              isDistinct: false
+            columnReference:
+              columnCounter: 16e7ddb7dc4e8e4ab1d758d6e5c34bee6d772c2c7cc1dbf3550ba4a8069ebf34
+              stepCounter: e45746cb8566d30e43506391a0abd8ab50046b76d335a5595c3193dc524b95d2
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: O_ORDERSTATUS
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a54ec8cd9ae2802c59982737d5d0081339fe3e5d2d109c73011e31b1cd2fa8e5
+                    stepCounter: b933b6f9a1370d37bb2c9cbf0a1a8a951badf1ec744f40ade565dd5841c0986d
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: false
+              isDistinct: true
+            columnReference:
+              columnCounter: 3bbdd659be4e948fbbbea576db9323e0f2a1aca44813b37681eaffcad591bb4e
+              stepCounter: e45746cb8566d30e43506391a0abd8ab50046b76d335a5595c3193dc524b95d2
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: O_ORDERKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: dd1aad5431a8a19236bcae4b03594c02286308f1ed5f34ef9f1ba5b3eb2be3a9
+                    stepCounter: b933b6f9a1370d37bb2c9cbf0a1a8a951badf1ec744f40ade565dd5841c0986d
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: false
+              isDistinct: false
+            columnReference:
+              columnCounter: e89c4bebdf1e25daa4ccc6af52b34386d8498f6027528f4a8bcd638bbb9bab94
+              stepCounter: e45746cb8566d30e43506391a0abd8ab50046b76d335a5595c3193dc524b95d2
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: O_CUSTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fd6242757efb373c41c5d2cbeb71e0598d0eceef4933c862cc8ea8b677bd7278
+                    stepCounter: b933b6f9a1370d37bb2c9cbf0a1a8a951badf1ec744f40ade565dd5841c0986d
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: d2e0e500833532ffc7a1c7bcd6a16bef3e14de201835c49cd7a513c220305a39
+              stepCounter: e45746cb8566d30e43506391a0abd8ab50046b76d335a5595c3193dc524b95d2
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: O_TOTALPRICE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5059479bb470d6583362624efd78b9580c9aab5c7ed473dbc548129c339d4844
+                    stepCounter: b933b6f9a1370d37bb2c9cbf0a1a8a951badf1ec744f40ade565dd5841c0986d
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: false
+              isDistinct: false
+            columnReference:
+              columnCounter: 41abda41d488916c1f8ebf6f15011459a5fff8e52e50b488cfceead2fb468022
+              stepCounter: e45746cb8566d30e43506391a0abd8ab50046b76d335a5595c3193dc524b95d2
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: O_CLERK
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: cde4442b68e39d94f12fba22cd861dd112d589af1dc8b2d63123bb7bb33b632a
+                    stepCounter: b933b6f9a1370d37bb2c9cbf0a1a8a951badf1ec744f40ade565dd5841c0986d
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: bdbff195699596d25709559af433fbe009ef71f8229bf3fd4fbdf449b9470128
+              stepCounter: e45746cb8566d30e43506391a0abd8ab50046b76d335a5595c3193dc524b95d2
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: O_ORDERPRIORITY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 68c4eb936ca4f709ff6fb82876508df839a024f6d552f9832e3f6291f8240f0b
+                    stepCounter: b933b6f9a1370d37bb2c9cbf0a1a8a951badf1ec744f40ade565dd5841c0986d
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: a5d92f2ed64e908ad724df98c5db0cf6160b69e3ad36043488bddcf52bdf8584
+              stepCounter: e45746cb8566d30e43506391a0abd8ab50046b76d335a5595c3193dc524b95d2
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: O_SHIPPRIORITY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 91fe132a39a4aeba7fa595f3e57d9d3353ab5c6855571cb5e9c419288448ea65
+                    stepCounter: b933b6f9a1370d37bb2c9cbf0a1a8a951badf1ec744f40ade565dd5841c0986d
+                transform: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TPCH_SF1
+                nodeName: ORDERS
+            join:
+                joinCondition: FROM {{ ref('TPCH_SF1', 'ORDERS') }} "ORDERS"
+            name: STG_ORDERS
+            noLinkRefs: []
+      name: STG_ORDERS
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: e45746cb8566d30e43506391a0abd8ab50046b76d335a5595c3193dc524b95d2

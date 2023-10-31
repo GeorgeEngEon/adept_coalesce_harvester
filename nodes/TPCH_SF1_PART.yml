@@ -1,0 +1,801 @@
+steps:
+  PART-f3b26e081f49aa542403d6367105ce038395203f02980ae1f51e07d13357fab6:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: TPCH_SF1
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: cb4655c93d71a752e5f0aa58ed7d8398f7f69adb1cf96355bd3d1e773c9947a5
+              stepCounter: f3b26e081f49aa542403d6367105ce038395203f02980ae1f51e07d13357fab6
+            config: 
+            dataType: [null]
+            defaultValue: ""
+            description: ""
+            name: C_NATIONKEY
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: d259c138fc65a710cb953840809693541355f5e5996b18a8b7d479774ac79efb
+              stepCounter: f3b26e081f49aa542403d6367105ce038395203f02980ae1f51e07d13357fab6
+            config: 
+            dataType: [null]
+            defaultValue: ""
+            description: ""
+            name: C_ADDRESS
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: ac107de1676150e8297300c459025acad8cfd2e2de16d29b0e0fb32726d8e434
+              stepCounter: f3b26e081f49aa542403d6367105ce038395203f02980ae1f51e07d13357fab6
+            config: 
+            dataType: [null]
+            defaultValue: ""
+            description: ""
+            name: C_NAME
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: be78cdc1fc23b2127e941c8a454fc1cf4f2bd34e37e23c3db5f565d1432b9dce
+              stepCounter: f3b26e081f49aa542403d6367105ce038395203f02980ae1f51e07d13357fab6
+            config: 
+            dataType: [null]
+            defaultValue: ""
+            description: ""
+            name: C_PHONE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: c758e7800afb601583e59565b474dfc21b49f36e0bdac4ddc659cbaa218623d4
+              stepCounter: f3b26e081f49aa542403d6367105ce038395203f02980ae1f51e07d13357fab6
+            config: 
+            dataType: [null]
+            defaultValue: ""
+            description: ""
+            name: C_ACCTBAL
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: b78a027c464be52138a901c91580838153bc6fc78ba6c7ceead68d07e82484b7
+              stepCounter: f3b26e081f49aa542403d6367105ce038395203f02980ae1f51e07d13357fab6
+            config: 
+            dataType: [null]
+            defaultValue: ""
+            description: ""
+            name: C_COMMENT
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 45b66541b5bfb196dd667098db19ef00c1da6af2d2fd34807ba146a1d9d48ed9
+              stepCounter: f3b26e081f49aa542403d6367105ce038395203f02980ae1f51e07d13357fab6
+            config: 
+            dataType: [null]
+            defaultValue: ""
+            description: ""
+            name: C_MKTSEGMENT
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: c364c870cce6458877f5be3c59a6ca1ef17fe1d034381838bbb3c4ea591774cb
+              stepCounter: f3b26e081f49aa542403d6367105ce038395203f02980ae1f51e07d13357fab6
+            config: 
+            dataType: [null]
+            defaultValue: ""
+            description: ""
+            name: C_CUSTKEY
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 7b9ad0dfe8a921366155a9d32a325e5e654df79c0823cc6e43f76e2692c7737b
+              stepCounter: f3b26e081f49aa542403d6367105ce038395203f02980ae1f51e07d13357fab6
+            config: 
+            dataType: [null]
+            defaultValue: ""
+            description: ""
+            name: O_COMMENT
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 62623d874c8afe7e95a0fd9dff1ab02e2a79258e58d0879e9a3800a5e101fbdc
+              stepCounter: f3b26e081f49aa542403d6367105ce038395203f02980ae1f51e07d13357fab6
+            config: 
+            dataType: [null]
+            defaultValue: ""
+            description: ""
+            name: O_ORDERDATE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 40085fbc55186bc964d8286f62013ea37adc138e2e3eb237dd9b34756739b407
+              stepCounter: f3b26e081f49aa542403d6367105ce038395203f02980ae1f51e07d13357fab6
+            config: 
+            dataType: [null]
+            defaultValue: ""
+            description: ""
+            name: O_ORDERSTATUS
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 030ea75920ef473b0080592309c934cc7c479dd58cbdc15376766914b6e70e88
+              stepCounter: f3b26e081f49aa542403d6367105ce038395203f02980ae1f51e07d13357fab6
+            config: 
+            dataType: [null]
+            defaultValue: ""
+            description: ""
+            name: O_ORDERKEY
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 6ea8caa5b63d371c581af6f3f7e2b4f5f711a61019599f42ba9e20500236b51a
+              stepCounter: f3b26e081f49aa542403d6367105ce038395203f02980ae1f51e07d13357fab6
+            config: 
+            dataType: [null]
+            defaultValue: ""
+            description: ""
+            name: O_CUSTKEY
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 18e19dbb041286d1825753411cdc888658c646d74d60aab4ef22f24a937279d2
+              stepCounter: f3b26e081f49aa542403d6367105ce038395203f02980ae1f51e07d13357fab6
+            config: 
+            dataType: [null]
+            defaultValue: ""
+            description: ""
+            name: O_TOTALPRICE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: cc3d778d8eb3a5ead1e5da5f347d292183d147fa38bcbc33ccf24765afdbe5fe
+              stepCounter: f3b26e081f49aa542403d6367105ce038395203f02980ae1f51e07d13357fab6
+            config: 
+            dataType: [null]
+            defaultValue: ""
+            description: ""
+            name: O_CLERK
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 9e9187d1b9f41f16e20190843e04110e99f7c1027c697f84684a56cb0d818886
+              stepCounter: f3b26e081f49aa542403d6367105ce038395203f02980ae1f51e07d13357fab6
+            config: 
+            dataType: [null]
+            defaultValue: ""
+            description: ""
+            name: O_ORDERPRIORITY
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 998b73a8c0d0bce705ae5553f109644b0f464fa36aae84164cfc06edef99825c
+              stepCounter: f3b26e081f49aa542403d6367105ce038395203f02980ae1f51e07d13357fab6
+            config: 
+            dataType: [null]
+            defaultValue: ""
+            description: ""
+            name: O_SHIPPRIORITY
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 7ba9a600d60b0177d6bcfd9ae2f5ae67b867eacac9a8792122137c4e2e079085
+              stepCounter: f3b26e081f49aa542403d6367105ce038395203f02980ae1f51e07d13357fab6
+            config: 
+            dataType: [null]
+            defaultValue: ""
+            description: ""
+            name: L_SHIPMODE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: cbea29fc02a10cdbd671a6afbb3628b7d5aaf20fbdb6487066d33ed3068c6c44
+              stepCounter: f3b26e081f49aa542403d6367105ce038395203f02980ae1f51e07d13357fab6
+            config: 
+            dataType: [null]
+            defaultValue: ""
+            description: ""
+            name: L_TAX
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: d34aeea55e184ffda36c48080e84ec163963c9d94785a1f5e87fc259c4367ff6
+              stepCounter: f3b26e081f49aa542403d6367105ce038395203f02980ae1f51e07d13357fab6
+            config: 
+            dataType: [null]
+            defaultValue: ""
+            description: ""
+            name: L_COMMITDATE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: fc35da8fc69651c5c5632e088680020bdb5659297c2dcf63e684c56e1836a888
+              stepCounter: f3b26e081f49aa542403d6367105ce038395203f02980ae1f51e07d13357fab6
+            config: 
+            dataType: [null]
+            defaultValue: ""
+            description: ""
+            name: L_EXTENDEDPRICE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: e14b3f767fe16f003699d106e6241ec45928337d93eff2d687f86fcb70ad3808
+              stepCounter: f3b26e081f49aa542403d6367105ce038395203f02980ae1f51e07d13357fab6
+            config: 
+            dataType: [null]
+            defaultValue: ""
+            description: ""
+            name: L_LINESTATUS
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: d824598e6531fb3125d62cd7dc0a131694f4e794fd50c1ede4cc4eb7dc06a2bd
+              stepCounter: f3b26e081f49aa542403d6367105ce038395203f02980ae1f51e07d13357fab6
+            config: 
+            dataType: [null]
+            defaultValue: ""
+            description: ""
+            name: L_ORDERKEY
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 5c01ceb25d4e085fe37eb65ea142bc0972d7596e18abe60caebf9d93189fef58
+              stepCounter: f3b26e081f49aa542403d6367105ce038395203f02980ae1f51e07d13357fab6
+            config: 
+            dataType: [null]
+            defaultValue: ""
+            description: ""
+            name: L_RETURNFLAG
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: f4fc4665ea21308a4586fef13e8ec35802cd5cb9d7c49ea194c4f19049bedf1e
+              stepCounter: f3b26e081f49aa542403d6367105ce038395203f02980ae1f51e07d13357fab6
+            config: 
+            dataType: [null]
+            defaultValue: ""
+            description: ""
+            name: L_RECEIPTDATE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 1c57387fab93e3de556d6f860b2667a92604f1f03a460373007a945c95eec4f4
+              stepCounter: f3b26e081f49aa542403d6367105ce038395203f02980ae1f51e07d13357fab6
+            config: 
+            dataType: [null]
+            defaultValue: ""
+            description: ""
+            name: L_PARTKEY
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 3f29e0a04cb0da5ab94d0f5e687650932e87a1436ccf51f5e6793ec86cc5d0b4
+              stepCounter: f3b26e081f49aa542403d6367105ce038395203f02980ae1f51e07d13357fab6
+            config: 
+            dataType: [null]
+            defaultValue: ""
+            description: ""
+            name: L_LINENUMBER
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 6ad5c46d75cc170d0354c77c0d1cbab668cc5e5a2b407e6fc697371d059f8e12
+              stepCounter: f3b26e081f49aa542403d6367105ce038395203f02980ae1f51e07d13357fab6
+            config: 
+            dataType: [null]
+            defaultValue: ""
+            description: ""
+            name: L_SHIPDATE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 89513e3eb2b52538352be17165c8d5c8855cdf50bfeeaecd45ca4d6fdd09d796
+              stepCounter: f3b26e081f49aa542403d6367105ce038395203f02980ae1f51e07d13357fab6
+            config: 
+            dataType: [null]
+            defaultValue: ""
+            description: ""
+            name: L_SHIPINSTRUCT
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: af00e78de8b08f18f5ef9407202f5ee1cbd4f2a9aa9d6eda71eb8c31ae573311
+              stepCounter: f3b26e081f49aa542403d6367105ce038395203f02980ae1f51e07d13357fab6
+            config: 
+            dataType: [null]
+            defaultValue: ""
+            description: ""
+            name: L_SUPPKEY
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 54047d4ebedb445e7bc4a32bea1b8f766db5662f59d9db8cdbe42884565e17da
+              stepCounter: f3b26e081f49aa542403d6367105ce038395203f02980ae1f51e07d13357fab6
+            config: 
+            dataType: [null]
+            defaultValue: ""
+            description: ""
+            name: L_DISCOUNT
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: bb6d163fe4fa4ae93acd7ee9f8c6534736bed360a3ca38a916e75e2b5d5fa151
+              stepCounter: f3b26e081f49aa542403d6367105ce038395203f02980ae1f51e07d13357fab6
+            config: 
+            dataType: [null]
+            defaultValue: ""
+            description: ""
+            name: L_COMMENT
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 7a8daaf565f91c3d938a984a7259665a1b8264aa263a65e0103acefdbbcf9302
+              stepCounter: f3b26e081f49aa542403d6367105ce038395203f02980ae1f51e07d13357fab6
+            config: 
+            dataType: [null]
+            defaultValue: ""
+            description: ""
+            name: L_QUANTITY
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 57634bc21a2d5bcd50d7f995523f02de362d3f1a5aba0c884a293b26ea3d8abd
+              stepCounter: f3b26e081f49aa542403d6367105ce038395203f02980ae1f51e07d13357fab6
+            config: 
+            dataType: [null]
+            defaultValue: ""
+            description: ""
+            name: N_COMMENT
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 3aaa9613b5212954aeae5f6ac9f57580e0734006a3e9c520f7d484f186e1a176
+              stepCounter: f3b26e081f49aa542403d6367105ce038395203f02980ae1f51e07d13357fab6
+            config: 
+            dataType: [null]
+            defaultValue: ""
+            description: ""
+            name: N_NAME
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 8b0cf88e9bec0833b075febfe35569d61deb837269d6b32805da3aeb3541b87d
+              stepCounter: f3b26e081f49aa542403d6367105ce038395203f02980ae1f51e07d13357fab6
+            config: 
+            dataType: [null]
+            defaultValue: ""
+            description: ""
+            name: N_NATIONKEY
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 544d4e4a4b94c335361b8db551fb71c1703f4e97ddceb14bd84b97c42398607b
+              stepCounter: f3b26e081f49aa542403d6367105ce038395203f02980ae1f51e07d13357fab6
+            config: 
+            dataType: [null]
+            defaultValue: ""
+            description: ""
+            name: N_REGIONKEY
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 02bef30d912ca3fd49737a7e5d4ea3930ef9df6bb9868f010485bef5ba305543
+              stepCounter: f3b26e081f49aa542403d6367105ce038395203f02980ae1f51e07d13357fab6
+            config: 
+            dataType: [null]
+            defaultValue: ""
+            description: ""
+            name: P_CONTAINER
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: d6bccf7698da751ab3bd662e6eb3a4497b483f9e06ae8b5e6897d977961bdc84
+              stepCounter: f3b26e081f49aa542403d6367105ce038395203f02980ae1f51e07d13357fab6
+            config: 
+            dataType: [null]
+            defaultValue: ""
+            description: ""
+            name: P_MFGR
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 699c297a2f835d256a9dbfc84a8b15b626675f186e6368e45e6230f2707f62a7
+              stepCounter: f3b26e081f49aa542403d6367105ce038395203f02980ae1f51e07d13357fab6
+            config: 
+            dataType: [null]
+            defaultValue: ""
+            description: ""
+            name: P_COMMENT
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 4efba33ef28ab58d1e14ec5ed85dc52f173f769bd6a009c98de8aa512f08e978
+              stepCounter: f3b26e081f49aa542403d6367105ce038395203f02980ae1f51e07d13357fab6
+            config: 
+            dataType: [null]
+            defaultValue: ""
+            description: ""
+            name: P_SIZE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 57318d32c3c5016f5033811ccdd4a6e0b577480bb94bc477bad3c6ade9b24b47
+              stepCounter: f3b26e081f49aa542403d6367105ce038395203f02980ae1f51e07d13357fab6
+            config: 
+            dataType: [null]
+            defaultValue: ""
+            description: ""
+            name: P_PARTKEY
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 41c3c96eaba00dad4f9efd80a6e280d0a60328772b301fbb56dc842919c0ca7a
+              stepCounter: f3b26e081f49aa542403d6367105ce038395203f02980ae1f51e07d13357fab6
+            config: 
+            dataType: [null]
+            defaultValue: ""
+            description: ""
+            name: P_RETAILPRICE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: bd3ad10447bfcd6ab04d4e35b62a61038692132b0790b8dd5115142b593a0241
+              stepCounter: f3b26e081f49aa542403d6367105ce038395203f02980ae1f51e07d13357fab6
+            config: 
+            dataType: [null]
+            defaultValue: ""
+            description: ""
+            name: P_NAME
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: a8e9a3adbb503547618d3a1582c9eb357a422b0a7e49269bfddca7028d08ae87
+              stepCounter: f3b26e081f49aa542403d6367105ce038395203f02980ae1f51e07d13357fab6
+            config: 
+            dataType: [null]
+            defaultValue: ""
+            description: ""
+            name: P_TYPE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: bd462d53d28bc5499fb35015d60e7886d82c4e69a926867970fcc62f2f0d0174
+              stepCounter: f3b26e081f49aa542403d6367105ce038395203f02980ae1f51e07d13357fab6
+            config: 
+            dataType: [null]
+            defaultValue: ""
+            description: ""
+            name: P_BRAND
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM { ref(f'TPCH_SF1', 'PART') }
+      name: PART
+      schema: ""
+      sqlType: Source
+      table: PART
+      type: sourceInput
+    stepCounter: f3b26e081f49aa542403d6367105ce038395203f02980ae1f51e07d13357fab6
