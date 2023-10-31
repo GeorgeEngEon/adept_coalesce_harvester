@@ -1,0 +1,136 @@
+steps:
+  STG_REGION-9f9f55dc37ace5acd55922402bccae8c71263e1992907215b6359974d6340c6c:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: true
+      locationName: DBT_JANEROSE
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 5c5291ff73b7faa2696777c5beb7a08a11eb950b989027683ce9a14415ed1edb
+              stepCounter: 9f9f55dc37ace5acd55922402bccae8c71263e1992907215b6359974d6340c6c
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 69a408949b3c58653c3d1c9846e907e1c8bcf46a0f3ef69c6cbeccb1f2188efd
+                    stepCounter: 9803fa538fdc3ede5e3d8d84e5890ed3ccebd222ebe2e3929e0a01ba945312c5
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: false
+              isDistinct: true
+            columnReference:
+              columnCounter: 828041246392381d87a3f3cda90c1b3371961cac4691eb65a14c5d4a89a1fc4d
+              stepCounter: 9f9f55dc37ace5acd55922402bccae8c71263e1992907215b6359974d6340c6c
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: R_NAME
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 748abe38bab8614eea5dac9deab3d1dc71a7a99a31b4601dbb3937f8a1112b8a
+                    stepCounter: 9803fa538fdc3ede5e3d8d84e5890ed3ccebd222ebe2e3929e0a01ba945312c5
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: false
+              isDistinct: true
+            columnReference:
+              columnCounter: 7ce16fd6dfdff8df3f631c4bcaae0c5288b34c2203dff208363bbcd2bb0df946
+              stepCounter: 9f9f55dc37ace5acd55922402bccae8c71263e1992907215b6359974d6340c6c
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: R_REGIONKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f76c3289c6a66ec343dc7e4003c843f025a7dbda37ea2c106c3110400a37b224
+                    stepCounter: 9803fa538fdc3ede5e3d8d84e5890ed3ccebd222ebe2e3929e0a01ba945312c5
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 1b6e2b6735e34fbe84ac15906b5c78daefd93a89c00aaf7f277b8aa689afd0c9
+              stepCounter: 9f9f55dc37ace5acd55922402bccae8c71263e1992907215b6359974d6340c6c
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3c4a45fd7463c9f56e3859908ecfaae2352ef5186defca4fa4c0ae3a189f1b9d
+                    stepCounter: 9803fa538fdc3ede5e3d8d84e5890ed3ccebd222ebe2e3929e0a01ba945312c5
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: false
+              isDistinct: false
+            columnReference:
+              columnCounter: 7f38c74fbd73ca0ada0260b72862be3bc5bde88e5bd5f9b29eb48dff39036331
+              stepCounter: 9f9f55dc37ace5acd55922402bccae8c71263e1992907215b6359974d6340c6c
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: R_COMMENT
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0ea7ac8e9919384aa9b0583b2ab582610995c68f5628edbd7a26402338839c0f
+                    stepCounter: 9803fa538fdc3ede5e3d8d84e5890ed3ccebd222ebe2e3929e0a01ba945312c5
+                transform: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TPCH_SF1
+                nodeName: REGION
+            join:
+                joinCondition: FROM {{ ref('TPCH_SF1', 'REGION') }} "REGION"
+            name: STG_REGION
+            noLinkRefs: []
+      name: STG_REGION
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 9f9f55dc37ace5acd55922402bccae8c71263e1992907215b6359974d6340c6c
