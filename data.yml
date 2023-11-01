@@ -1,7 +1,31 @@
 defaultStorageMapping: DBT_GGITHIRI
 installedPackages: {}
 jobs: {}
-locations: {}
+locations:
+  DBT_GGITHIRI:
+    mappingDefinitions:
+      "44":
+        database: ANALYTICS
+        schema: DBT_GGITHIRI
+      "45":
+        database: ANALYTICS
+        schema: COALECE
+  JAFFLE_SHOP:
+    mappingDefinitions:
+      "44":
+        database: RAW
+        schema: JAFFLE_SHOP
+      "45":
+        database: RAW
+        schema: JAFFLE_SHOP
+  STRIPE:
+    mappingDefinitions:
+      "44":
+        database: RAW
+        schema: STRIPE
+      "45":
+        database: RAW
+        schema: STRIPE
 macros:
   Macro-equal_rowcount:
     id: equal_rowcount
