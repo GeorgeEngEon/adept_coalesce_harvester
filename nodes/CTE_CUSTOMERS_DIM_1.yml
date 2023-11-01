@@ -1,0 +1,96 @@
+steps:
+  CTE_CUSTOMERS_DIM_1-de348f5b7530d02ea5e3bbf4059ec50d29311f311ac92c8c04dc310b21379082:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: true
+      locationName: DBT_GGITHIRI
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: fd355664e683d6ead401cfb35cbeda78953cca31d887638974550442f8d2b557
+              stepCounter: de348f5b7530d02ea5e3bbf4059ec50d29311f311ac92c8c04dc310b21379082
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CUSTOMER_ID
+            nullable: false
+            sourceColumnReferences:
+            - columnReferences:
+              - columnCounter: 5b44f45807990463bf7bcf7fbc07849cb4cec8380b1ef5c14c0307dc590e6561
+                stepCounter: f7db95a0ede0eb85c728116660106d77eb195a965f40da1875dc0e2b61a6a8b3
+              transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 9a53402dd3369fdbb225c23e24715cb49e361c910a48c6b4f95714e94036e065
+              stepCounter: de348f5b7530d02ea5e3bbf4059ec50d29311f311ac92c8c04dc310b21379082
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: FIRST_NAME
+            nullable: false
+            sourceColumnReferences:
+            - columnReferences:
+              - columnCounter: c1718cc4a605681b300c22e3a3707e75fdd0562b7f052adbf1ba9c504e674ccb
+                stepCounter: f7db95a0ede0eb85c728116660106d77eb195a965f40da1875dc0e2b61a6a8b3
+              transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: a3dab37cbcd3867e6de796a14eeae3f59c3052ce3038d3a90d045db16389cd96
+              stepCounter: de348f5b7530d02ea5e3bbf4059ec50d29311f311ac92c8c04dc310b21379082
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LAST_NAME
+            nullable: false
+            sourceColumnReferences:
+            - columnReferences:
+              - columnCounter: 18a01a57ef85bd799abea947d1ff14aae451f85718192f7dff9c1a6e21c0b827
+                stepCounter: f7db95a0ede0eb85c728116660106d77eb195a965f40da1875dc0e2b61a6a8b3
+              transform: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DBT_GGITHIRI
+                nodeName: DIM_CUSTOMERS_RS_1
+            join:
+                joinCondition: FROM {{ ref('DBT_GGITHIRI', 'DIM_CUSTOMERS_RS_1') }} "DIM_CUSTOMERS_RS_1"
+            name: CTE_CUSTOMERS_DIM_1
+            noLinkRefs: []
+      name: CTE_CUSTOMERS_DIM_1
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: de348f5b7530d02ea5e3bbf4059ec50d29311f311ac92c8c04dc310b21379082
