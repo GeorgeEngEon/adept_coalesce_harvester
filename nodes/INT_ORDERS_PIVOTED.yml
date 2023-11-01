@@ -1,0 +1,56 @@
+steps:
+  INT_ORDERS_PIVOTED-ab5d21afc8811f1e88785aa7ba5ae3632a04b358816678651d2550422fd46bc5:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationName: DBT_GGITHIRI
+      materializationType: Table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: false
+              isDistinct: true
+            columnReference:
+              columnCounter: f76883478feb3615c2dd562b895760727b1ba490c05d15c2adbdea5d61d91f10
+              stepCounter: ab5d21afc8811f1e88785aa7ba5ae3632a04b358816678651d2550422fd46bc5
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            isBusinessKey: true
+            name: ORDER_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fdaf276b8c9864fb3049afbd7d9d1aa58f49d141e4bf06ac7ae868459675b3dd
+                    stepCounter: 189a40d736ccc0cc0111844a8e2d93a4b9e8a5a22c6023c1633df4fadb85396d
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DBT_GGITHIRI
+                nodeName: INT_ORDERS__PIVOTED_RS_3
+            join:
+              joinCondition: FROM {ref(DBT_GGITHIRI,INT_ORDERS__PIVOTED_RS_3)} "INT_ORDERS__PIVOTED_RS_3"
+            name: DIM_INT_ORDERS__PIVOTED
+            noLinkRefs: []
+      name: DIM_INT_ORDERS__PIVOTED
+      overrideSQL: false
+      schema: ""
+      sqlType: Dimension
+      type: sql
+    stepCounter: ab5d21afc8811f1e88785aa7ba5ae3632a04b358816678651d2550422fd46bc5
