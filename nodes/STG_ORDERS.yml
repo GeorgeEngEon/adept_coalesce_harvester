@@ -84,7 +84,7 @@ steps:
               hasNull: true
               isDistinct: false
             columnReference:
-              columnCounter: 9e81b86bb25712e19f4b61762886b24337b5cbaa479097f5602f2fa13394c0ea
+              columnCounter: d225ddb29e65277f04c69dabb10f238b8dffbbe5852174da3202106b48233168
               stepCounter: b8f5c0cf42244fc86d9bd939d4582c3384e92399bb9d4c9d6d0ad87051b2d0fb
             dataType: ""
             description: ""

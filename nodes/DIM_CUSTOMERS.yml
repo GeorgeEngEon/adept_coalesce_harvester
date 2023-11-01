@@ -18,24 +18,6 @@ steps:
           - acceptedValues:
               strictMatch: true
               values: []
-            appliedColumnTests: 
-            columnReference:
-              columnCounter: a296726a-51b7-4e77-b4a0-7b07fdf0e0fc
-              stepCounter: 7b2b4150c8f740c6b3f999ef5cb15fe3e22e618782108ed94eb12672bf943b70
-            config: 
-            dataType: ""
-            defaultValue: ""
-            description: ""
-            hashColumns: []
-            isSurrogateKey: true
-            name: DIM_CUSTOMERS_KEY
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences: []
-                transform: ""
-          - acceptedValues:
-              strictMatch: true
-              values: []
             appliedColumnTests:
               hasNull: false
               isDistinct: true
@@ -48,120 +30,12 @@ steps:
             hashDetails: null
             isBusinessKey: true
             name: CUSTOMER_ID
-            nullable: false
+            nullable: true
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: 7a32644ae669c755d809ff0e2d331bcd921fb23cdf584dd0473b75a231bd317c
                     stepCounter: 328dfa9822acb34df80d322c5c589b7bb45ead6da94657b09089bb9e1ab12fed
                 transform: ""
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: 
-            columnReference:
-              columnCounter: a296726a-51b7-4e77-b4a0-7b07fdf0e0fc
-              stepCounter: 7b2b4150c8f740c6b3f999ef5cb15fe3e22e618782108ed94eb12672bf943b70
-            config: 
-            dataType: ""
-            defaultValue: ""
-            description: ""
-            hashColumns: []
-            isSystemVersion: true
-            name: SYSTEM_VERSION
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences: []
-                transform: ""
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: 
-            columnReference:
-              columnCounter: a296726a-51b7-4e77-b4a0-7b07fdf0e0fc
-              stepCounter: 7b2b4150c8f740c6b3f999ef5cb15fe3e22e618782108ed94eb12672bf943b70
-            config: 
-            dataType: ""
-            defaultValue: ""
-            description: ""
-            hashColumns: []
-            isSystemCurrentFlag: true
-            name: SYSTEM_CURRENT_FLAG
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences: []
-                transform: ""
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: 
-            columnReference:
-              columnCounter: a296726a-51b7-4e77-b4a0-7b07fdf0e0fc
-              stepCounter: 7b2b4150c8f740c6b3f999ef5cb15fe3e22e618782108ed94eb12672bf943b70
-            config: 
-            dataType: TIMESTAMP
-            defaultValue: ""
-            description: ""
-            hashColumns: []
-            isSystemStartDate: true
-            name: SYSTEM_START_DATE
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences: []
-                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: 
-            columnReference:
-              columnCounter: a296726a-51b7-4e77-b4a0-7b07fdf0e0fc
-              stepCounter: 7b2b4150c8f740c6b3f999ef5cb15fe3e22e618782108ed94eb12672bf943b70
-            config: 
-            dataType: TIMESTAMP
-            defaultValue: ""
-            description: ""
-            hashColumns: []
-            isSystemEndDate: true
-            name: SYSTEM_END_DATE
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences: []
-                transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: 
-            columnReference:
-              columnCounter: a296726a-51b7-4e77-b4a0-7b07fdf0e0fc
-              stepCounter: 7b2b4150c8f740c6b3f999ef5cb15fe3e22e618782108ed94eb12672bf943b70
-            config: 
-            dataType: TIMESTAMP
-            defaultValue: ""
-            description: ""
-            hashColumns: []
-            isSystemCreateDate: true
-            name: SYSTEM_CREATE_DATE
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences: []
-                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: 
-            columnReference:
-              columnCounter: a296726a-51b7-4e77-b4a0-7b07fdf0e0fc
-              stepCounter: 7b2b4150c8f740c6b3f999ef5cb15fe3e22e618782108ed94eb12672bf943b70
-            config: 
-            dataType: TIMESTAMP
-            defaultValue: ""
-            description: ""
-            hashColumns: []
-            isSystemUpdateDate: true
-            name: SYSTEM_UPDATE_DATE
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences: []
-                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
