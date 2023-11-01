@@ -1,5 +1,5 @@
 steps:
-  DIM_CUSTOMERS-7b2b4150c8f740c6b3f999ef5cb15fe3e22e618782108ed94eb12672bf943b70:
+  INT_ORDERS_PIVOTED-ab5d21afc8811f1e88785aa7ba5ae3632a04b358816678651d2550422fd46bc5:
     operation:
       config:
         postSQL: ""
@@ -20,19 +20,19 @@ steps:
               values: []
             appliedColumnTests: 
             columnReference:
-              columnCounter: a296726a-51b7-4e77-b4a0-7b07fdf0e0fc
-              stepCounter: 7b2b4150c8f740c6b3f999ef5cb15fe3e22e618782108ed94eb12672bf943b70
+              columnCounter: 1ce8260a-2987-42e5-aa7b-d0f98df87875
+              stepCounter: ab5d21afc8811f1e88785aa7ba5ae3632a04b358816678651d2550422fd46bc5
             config: 
-            dataType: ""
+            dataType: NUMBER
             defaultValue: ""
             description: ""
             hashColumns: []
             isSurrogateKey: true
-            name: DIM_CUSTOMERS_KEY
+            name: DIM_SUPPLIER_KEY
             nullable: true
             sourceColumnReferences:
-              - columnReferences: []
-                transform: ""
+            - columnReferences: []
+              transform: ""
           - acceptedValues:
               strictMatch: true
               values: []
@@ -40,29 +40,29 @@ steps:
               hasNull: false
               isDistinct: true
             columnReference:
-              columnCounter: af4516b1a613f959c8b82a8f2e370952efa4bf60bd5a702a0ae15bd4d39e94b4
-              stepCounter: 7b2b4150c8f740c6b3f999ef5cb15fe3e22e618782108ed94eb12672bf943b70
+              columnCounter: f76883478feb3615c2dd562b895760727b1ba490c05d15c2adbdea5d61d91f10
+              stepCounter: ab5d21afc8811f1e88785aa7ba5ae3632a04b358816678651d2550422fd46bc5
             dataType: ""
             description: ""
             hashColumns: []
             hashDetails: null
             isBusinessKey: true
-            name: CUSTOMER_ID
+            name: ORDER_ID
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 7a32644ae669c755d809ff0e2d331bcd921fb23cdf584dd0473b75a231bd317c
-                    stepCounter: 328dfa9822acb34df80d322c5c589b7bb45ead6da94657b09089bb9e1ab12fed
+                  - columnCounter: fdaf276b8c9864fb3049afbd7d9d1aa58f49d141e4bf06ac7ae868459675b3dd
+                    stepCounter: 189a40d736ccc0cc0111844a8e2d93a4b9e8a5a22c6023c1633df4fadb85396d
                 transform: ""
           - acceptedValues:
               strictMatch: true
               values: []
-            appliedColumnTests: 
+            appliedColumnTests:
             columnReference:
               columnCounter: a296726a-51b7-4e77-b4a0-7b07fdf0e0fc
-              stepCounter: 7b2b4150c8f740c6b3f999ef5cb15fe3e22e618782108ed94eb12672bf943b70
-            config: 
-            dataType: ""
+              stepCounter: ab5d21afc8811f1e88785aa7ba5ae3632a04b358816678651d2550422fd46bc5
+            config:
+            dataType: NUMBER
             defaultValue: ""
             description: ""
             hashColumns: []
@@ -70,17 +70,17 @@ steps:
             name: SYSTEM_VERSION
             nullable: true
             sourceColumnReferences:
-              - columnReferences: []
-                transform: ""
+            - columnReferences: []
+              transform: ""
           - acceptedValues:
               strictMatch: true
               values: []
-            appliedColumnTests: 
+            appliedColumnTests:
             columnReference:
               columnCounter: a296726a-51b7-4e77-b4a0-7b07fdf0e0fc
-              stepCounter: 7b2b4150c8f740c6b3f999ef5cb15fe3e22e618782108ed94eb12672bf943b70
-            config: 
-            dataType: ""
+              stepCounter: ab5d21afc8811f1e88785aa7ba5ae3632a04b358816678651d2550422fd46bc5
+            config:
+            dataType: VARCHAR
             defaultValue: ""
             description: ""
             hashColumns: []
@@ -88,16 +88,16 @@ steps:
             name: SYSTEM_CURRENT_FLAG
             nullable: true
             sourceColumnReferences:
-              - columnReferences: []
-                transform: ""
+            - columnReferences: []
+              transform: ""
           - acceptedValues:
               strictMatch: true
               values: []
-            appliedColumnTests: 
+            appliedColumnTests:
             columnReference:
               columnCounter: a296726a-51b7-4e77-b4a0-7b07fdf0e0fc
-              stepCounter: 7b2b4150c8f740c6b3f999ef5cb15fe3e22e618782108ed94eb12672bf943b70
-            config: 
+              stepCounter: ab5d21afc8811f1e88785aa7ba5ae3632a04b358816678651d2550422fd46bc5
+            config:
             dataType: TIMESTAMP
             defaultValue: ""
             description: ""
@@ -106,16 +106,16 @@ steps:
             name: SYSTEM_START_DATE
             nullable: true
             sourceColumnReferences:
-              - columnReferences: []
-                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+            - columnReferences: []
+              transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
           - acceptedValues:
               strictMatch: true
               values: []
-            appliedColumnTests: 
+            appliedColumnTests:
             columnReference:
               columnCounter: a296726a-51b7-4e77-b4a0-7b07fdf0e0fc
-              stepCounter: 7b2b4150c8f740c6b3f999ef5cb15fe3e22e618782108ed94eb12672bf943b70
-            config: 
+              stepCounter: ab5d21afc8811f1e88785aa7ba5ae3632a04b358816678651d2550422fd46bc5
+            config:
             dataType: TIMESTAMP
             defaultValue: ""
             description: ""
@@ -124,16 +124,16 @@ steps:
             name: SYSTEM_END_DATE
             nullable: true
             sourceColumnReferences:
-              - columnReferences: []
-                transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
+            - columnReferences: []
+              transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
           - acceptedValues:
               strictMatch: true
               values: []
-            appliedColumnTests: 
+            appliedColumnTests:
             columnReference:
               columnCounter: a296726a-51b7-4e77-b4a0-7b07fdf0e0fc
-              stepCounter: 7b2b4150c8f740c6b3f999ef5cb15fe3e22e618782108ed94eb12672bf943b70
-            config: 
+              stepCounter: ab5d21afc8811f1e88785aa7ba5ae3632a04b358816678651d2550422fd46bc5
+            config:
             dataType: TIMESTAMP
             defaultValue: ""
             description: ""
@@ -142,16 +142,16 @@ steps:
             name: SYSTEM_CREATE_DATE
             nullable: true
             sourceColumnReferences:
-              - columnReferences: []
-                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+            - columnReferences: []
+              transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
           - acceptedValues:
               strictMatch: true
               values: []
-            appliedColumnTests: 
+            appliedColumnTests:
             columnReference:
               columnCounter: a296726a-51b7-4e77-b4a0-7b07fdf0e0fc
-              stepCounter: 7b2b4150c8f740c6b3f999ef5cb15fe3e22e618782108ed94eb12672bf943b70
-            config: 
+              stepCounter: ab5d21afc8811f1e88785aa7ba5ae3632a04b358816678651d2550422fd46bc5
+            config:
             dataType: TIMESTAMP
             defaultValue: ""
             description: ""
@@ -160,8 +160,8 @@ steps:
             name: SYSTEM_UPDATE_DATE
             nullable: true
             sourceColumnReferences:
-              - columnReferences: []
-                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+            - columnReferences: []
+              transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
@@ -169,14 +169,14 @@ steps:
               customSQL: ""
             dependencies:
               - locationName: DBT_GGITHIRI
-                nodeName: DIM_CUSTOMERS_RS_5
+                nodeName: INT_ORDERS__PIVOTED_RS_3
             join:
-              joinCondition: FROM {{ ref('DBT_GGITHIRI', 'DIM_CUSTOMERS_RS_5') }} "DIM_CUSTOMERS_RS_5"
-              name: DIM_CUSTOMERS
-              noLinkRefs: []
-      name: DIM_CUSTOMERS
+              joinCondition: FROM {ref(DBT_GGITHIRI,INT_ORDERS__PIVOTED_RS_3)} "INT_ORDERS__PIVOTED_RS_3"
+            name: DIM_INT_ORDERS__PIVOTED
+            noLinkRefs: []
+      name: DIM_INT_ORDERS__PIVOTED
       overrideSQL: false
       schema: ""
       sqlType: Dimension
       type: sql
-    stepCounter: 7b2b4150c8f740c6b3f999ef5cb15fe3e22e618782108ed94eb12672bf943b70
+    stepCounter: ab5d21afc8811f1e88785aa7ba5ae3632a04b358816678651d2550422fd46bc5
