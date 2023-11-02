@@ -48,6 +48,7 @@ steps:
               joinCondition: FROM {{ ref('DBT_GGITHIRI', 'DIM_CUSTOMERS_RS_5') }} "DIM_CUSTOMERS_RS_5"
               name: DIM_CUSTOMERS
               noLinkRefs: []
+            name: DIM_CUSTOMERS
       name: DIM_CUSTOMERS
       overrideSQL: false
       schema: ""
