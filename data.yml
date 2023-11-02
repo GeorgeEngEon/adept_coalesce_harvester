@@ -3,11 +3,20 @@ installedPackages: {}
 jobs: {}
 locations:
   DBT_GGITHIRI:
-    mappingDefinitions: {}
+    mappingDefinitions:
+      "49":
+        database: ANALYTICS
+        schema: DBT_GGITHIRI
   JAFFLE_SHOP:
-    mappingDefinitions: {}
+    mappingDefinitions:
+      "49":
+        database: RAW
+        schema: JAFFLE_SHOP
   STRIPE:
-    mappingDefinitions: {}
+    mappingDefinitions:
+      "49":
+        database: RAW
+        schema: STRIPE
 macros:
   Macro-equal_rowcount:
     id: equal_rowcount
