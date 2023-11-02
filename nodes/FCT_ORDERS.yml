@@ -106,7 +106,7 @@ steps:
           join:
             joinCondition: |-
               FROM {{ ref('DBT_GGITHIRI', 'FCT_ORDERS_RS_5') }} "FCT_ORDERS_RS_5"
-              INNER JOIN {{ ref('DBT_GGITHIRI', 'CTE_ORDER_PAYMENTS_FCT_1') }} "CTE_ORDER_PAYMENTS_FCT_1" # noqa
+              INNER JOIN {{ ref('DBT_GGITHIRI', 'CTE_ORDER_PAYMENTS_FCT_1') }} "CTE_ORDER_PAYMENTS_FCT_1"
               ON "FCT_ORDERS_RS_5"./*COLUMN*/ = "CTE_ORDER_PAYMENTS_FCT_1"./*COLUMN*/
           name: FCT_ORDERS
           noLinkRefs: []
