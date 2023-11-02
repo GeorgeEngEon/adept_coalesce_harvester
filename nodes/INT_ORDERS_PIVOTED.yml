@@ -46,8 +46,8 @@ steps:
                 nodeName: INT_ORDERS__PIVOTED_RS_3
             join:
               joinCondition: FROM {{ ref('DBT_GGITHIRI', 'INT_ORDERS__PIVOTED_RS_3') }} "INT_ORDERS__PIVOTED_RS_3"
-            name: DIM_INT_ORDERS__PIVOTED
-            noLinkRefs: []
+              name: DIM_INT_ORDERS__PIVOTED
+              noLinkRefs: []
       name: DIM_INT_ORDERS__PIVOTED
       overrideSQL: false
       schema: ""
