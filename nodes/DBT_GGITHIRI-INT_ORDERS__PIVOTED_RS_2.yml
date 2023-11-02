@@ -1,0 +1,136 @@
+steps:
+  INT_ORDERS__PIVOTED_RS_2-1e45cd79b3c2f71a5611e90df70ee8d7982af199e2ea5d2a65c1fab8aae30df4:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: true
+      locationName: DBT_GGITHIRI
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 58aa55c31bd36018df77566a5b6e46552aebae5afbd1b18352d39879710bd416
+              stepCounter: 1e45cd79b3c2f71a5611e90df70ee8d7982af199e2ea5d2a65c1fab8aae30df4
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: BANK_TRANSFER_A
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: None
+                    stepCounter: 9b378e72eb51d745045e950e2b76641b37b1874cebdbdda20c586b20f60edf19
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: bbc247dab5a0fb40f87be0c921022ed7da69ed65c23a7017d4ae2466bff4e66f
+              stepCounter: 1e45cd79b3c2f71a5611e90df70ee8d7982af199e2ea5d2a65c1fab8aae30df4
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: COUPON_A
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: None
+                    stepCounter: 9b378e72eb51d745045e950e2b76641b37b1874cebdbdda20c586b20f60edf19
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 21089f722d801521a93dbf9812b09d08c193c03b6e3275716b7bfa52b463d3d1
+              stepCounter: 1e45cd79b3c2f71a5611e90df70ee8d7982af199e2ea5d2a65c1fab8aae30df4
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CREDIT_CARD_A
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: None
+                    stepCounter: 9b378e72eb51d745045e950e2b76641b37b1874cebdbdda20c586b20f60edf19
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 63e79f36925d3c6f9174507aba2c336f18e5adb9e7e4a061da9e41e21523fe28
+              stepCounter: 1e45cd79b3c2f71a5611e90df70ee8d7982af199e2ea5d2a65c1fab8aae30df4
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: GIFT_CARD_A
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: None
+                    stepCounter: 9b378e72eb51d745045e950e2b76641b37b1874cebdbdda20c586b20f60edf19
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: d5379c1dc8b22bb403dcf317034b9d878485c0631f87a5a2ab34fd488defcd38
+              stepCounter: 1e45cd79b3c2f71a5611e90df70ee8d7982af199e2ea5d2a65c1fab8aae30df4
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ORDER_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 48b94040621fd2b48a6c9966f4984d8e0f7d6d5c448427e5063db5cc0052a86d
+                    stepCounter: 9b378e72eb51d745045e950e2b76641b37b1874cebdbdda20c586b20f60edf19
+                transform: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DBT_GGITHIRI
+                nodeName: CTE_PAYMENTS_1
+            join:
+              joinCondition: FROM {{ ref('DBT_GGITHIRI', 'CTE_PAYMENTS_1') }} "CTE_PAYMENTS_1"
+            name: INT_ORDERS__PIVOTED_RS_2
+            noLinkRefs: []
+      name: INT_ORDERS__PIVOTED_RS_2
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 1e45cd79b3c2f71a5611e90df70ee8d7982af199e2ea5d2a65c1fab8aae30df4

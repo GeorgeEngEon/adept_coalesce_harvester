@@ -1,0 +1,96 @@
+steps:
+  INT_ORDERS__PIVOTED_RS_1-1cf83d56a8eab3e225f3ec8fd1ecaa40e91d4585056cf319159341d474c66961:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: true
+      locationName: DBT_GGITHIRI
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 8daec6e745c0262567716462ac9db072b568b9cb88c63f469c8e6ea51eefeee6
+              stepCounter: 1cf83d56a8eab3e225f3ec8fd1ecaa40e91d4585056cf319159341d474c66961
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: AMOUNT
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a3991e4564f969c728ffa7700fb5bf49e4eea1d84e5bb7dafa655d764f5bbf9b
+                    stepCounter: 8cff41de79c325762dba29b6e6370bea47e12d2da8ebfcd6e8df4e4bd234a932
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: e2f25bf9ddabf0620edeb68ea52255cb3d951a9b6296cfa861944e1a1c076a61
+              stepCounter: 1cf83d56a8eab3e225f3ec8fd1ecaa40e91d4585056cf319159341d474c66961
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ORDER_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d9ada6a89333f1cd176625b45523afe802f2767ed6a618afbc7aa0d149ae6d6f
+                    stepCounter: 8cff41de79c325762dba29b6e6370bea47e12d2da8ebfcd6e8df4e4bd234a932
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 7fa72dd270b990390cb3166644c1b332e4e880ffbc3a44a8498d571079d1b27b
+              stepCounter: 1cf83d56a8eab3e225f3ec8fd1ecaa40e91d4585056cf319159341d474c66961
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PAYMENT_METHOD
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1709667ffb0ec4854170f6a85eeace8c0750d7c143539478b2bb3935e5849c33
+                    stepCounter: 8cff41de79c325762dba29b6e6370bea47e12d2da8ebfcd6e8df4e4bd234a932
+                transform: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DBT_GGITHIRI
+                nodeName: STG_PAYMENTS
+            join:
+              joinCondition: FROM {{ ref('DBT_GGITHIRI', 'STG_PAYMENTS') }} "STG_PAYMENTS"
+            name: INT_ORDERS__PIVOTED_RS_1
+            noLinkRefs: []
+      name: INT_ORDERS__PIVOTED_RS_1
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 1cf83d56a8eab3e225f3ec8fd1ecaa40e91d4585056cf319159341d474c66961
