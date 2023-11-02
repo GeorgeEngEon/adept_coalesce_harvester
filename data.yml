@@ -593,7 +593,7 @@ stepTypes:
             options:
             - table
             - view
-
+          
           - type: businessKeyColumns
             isRequired: false
 
@@ -601,7 +601,7 @@ stepTypes:
             attributeName: testsEnabled
             type: toggleButton
             default: true
-
+            
           - displayName: Pre-SQL
             attributeName: preSQL
             type: textBox
@@ -632,7 +632,7 @@ stepTypes:
 
                 {% if node.materializationType == 'table' %}
                     {{ stage('Create Fact Table') }}
-
+                
                     CREATE OR REPLACE TABLE {{ ref_no_link(node.location.name, node.name) }}
                     (
                         {% for col in columns %}
@@ -645,11 +645,11 @@ stepTypes:
                         {% endfor %}
                     )
                     {%- if node.description | length > 0 %} COMMENT = '{{ node.description | escape }}'{% endif %}
-
-
+                
+                
                 {% elif node.materializationType == 'view' %}
                     {{ stage('Create Fact View') }}
-
+                
                     CREATE OR REPLACE VIEW {{ ref_no_link(node.location.name, node.name) }}
                     (
                         {% for col in columns %}
@@ -661,19 +661,20 @@ stepTypes:
                     {%- if node.description | length > 0 %} COMMENT = '{{ node.description | escape }}'{% endif %}
                     AS
                     {% for source in sources %}
-
+                
                         {% if loop.first %}SELECT {% endif %}
-
+                
                         {% for col in source.columns %}
                             {{ get_source_transform(col) }} AS "{{ col.name }}"
                             {%- if not loop.last -%}, {% endif %}
                         {% endfor %}
                         {{ source.join }}
-
+                
                         {% if not loop.last %} UNION ALL {% endif %}
                     {% endfor %}
-
+                
                 {% endif %}
+                
         run:
           templateString: |2-
 
@@ -689,13 +690,13 @@ stepTypes:
                         {{ stage('Pre-SQL') }}
                         {{ config.preSQL }}
                     {% endif %}
-
+                    
                     {% set has_business_key = columns | selectattr("isBusinessKey") | list | length > 0 %}
-
+                    
                     {% for source in sources %}
-
+                    
                         {% if has_business_key %}
-
+                    
                             {{ stage('MERGE ' + source.name | string ) }}
                             MERGE INTO {{ ref_no_link(node.location.name, node.name) }} "TGT"
                             USING (
@@ -745,11 +746,11 @@ stepTypes:
                                 {% if not loop.last %}, {% endif %}
                             {% endfor -%}
                             )
-
+                    
                         {% else %}
-
+                    
                             {{ stage('Insert ' + source.name | string ) }}
-
+                    
                                 INSERT INTO {{ ref_no_link(node.location.name, node.name) }}
                                 (
                                     {% for col in source.columns %}
@@ -757,7 +758,7 @@ stepTypes:
                                         {%- if not loop.last -%},{% endif %}
                                     {% endfor %}
                                 )
-
+                    
                                 SELECT
                                 {% for col in source.columns %}
                                     {{ get_source_transform(col) }} AS "{{ col.name }}"
@@ -787,6 +788,8 @@ stepTypes:
                         {% endfor %}
                     {% endfor %}
                 {% endif %}
+                
+                
     name: Fact
     version: 1
   StepType-Hub:
@@ -2687,11 +2690,11 @@ stepTypes:
             isRequired: true
 
           - type: multisourceToggle
-            enableIf: "{% if node.materializationType == 'table' %} true {% else %} false {% endif %}"
+            enableIf: "{% if node.materializationType == 'table' %} true {% else %} false {% endif %}" 
 
           - type: overrideSQLToggle
             enableIf: "{% if node.materializationType == 'view' %} true {% else %} false {% endif %}"
-
+            
           - displayName: Multi Source Strategy
             attributeName: insertStrategy
             type: dropdownSelector
@@ -2712,7 +2715,7 @@ stepTypes:
             attributeName: testsEnabled
             type: toggleButton
             default: true
-
+            
           - displayName: Pre-SQL
             attributeName: preSQL
             type: textBox
@@ -2728,7 +2731,7 @@ stepTypes:
         create:
           templateString: |
             {% if node.override.create.enabled %}
-
+            	
             	{{ node.override.create.script }}
 
             {% elif node.materializationType == 'table' %}
@@ -2795,17 +2798,17 @@ stepTypes:
             		{{ stage('Pre-SQL') }}
             		{{ config.preSQL }}
             	{% endif %}
-
-
-
+            	
+            	
+            	
             		{% if config.truncateBefore %}
-
+            	
             			{{ stage('Truncate Stage Table') }}
             			TRUNCATE IF EXISTS {{ ref_no_link(node.location.name, node.name) }}
-
+            	
             		{% endif %}
-
-
+            	
+            	
             		{% if config.insertStrategy in ['UNION', 'UNION ALL'] %}
             			{{ stage( config.insertStrategy + ' Sources' | string ) }}
             			INSERT INTO {{ ref_no_link(node.location.name, node.name) }}
@@ -2816,13 +2819,13 @@ stepTypes:
             					{% endfor %}
             				)
             		{% endif %}
-
-
+            	
+            	
             		{% for source in sources %}
-
+            	
             			{% if config.insertStrategy == 'INSERT' %}
             				{{ stage('Insert ' + source.name | string ) }}
-
+            	
             				INSERT INTO {{ ref_no_link(node.location.name, node.name) }}
             				(
             					{% for col in source.columns %}
@@ -2831,21 +2834,21 @@ stepTypes:
             					{% endfor %}
             				)
             			{% endif %}
-
+            	
             			SELECT
             			{% for col in source.columns %}
                             {{ get_source_transform(col) }} AS "{{ col.name }}"
             				{%- if not loop.last -%}, {% endif %}
             			{% endfor %}
-
+            	
             			{{ source.join }}
-
+            	
             			{% if config.insertStrategy in ['UNION', 'UNION ALL'] and not loop.last %}
             				{{config.insertStrategy}}
             			{% endif %}
-
+            	
             		{% endfor %}
-
+            	
             	{% if config.postSQL %}
             		{{ stage('Post-SQL') }}
             		{{ config.postSQL }}
@@ -2884,7 +2887,7 @@ stepTypes:
 
         config:
           - groupName: Options
-            items:
+            items: 
             - type: materializationSelector
               options:
                 - view
@@ -2905,14 +2908,14 @@ stepTypes:
               default: UNION
               options:
               - "UNION"
-              - "UNION ALL"
+              - "UNION ALL" 
               isRequired: true
               enableIf: "{% if node.isMultisource %} true {% else %} false {% endif %}"
       templates:
         create:
           templateString: |
             {% if node.override.create.enabled %}
-
+                
                 {{ node.override.create.script }}
 
             {% else %}
@@ -2960,7 +2963,7 @@ stepTypes:
         short: PSTG
         plural: Persistent Stages
         tagColor: '#29B2DB'
-
+            
         config:
         - groupName: Options
           items:
@@ -2970,7 +2973,7 @@ stepTypes:
             options:
             - table
             - view
-
+          
           - type: businessKeyColumns
             isRequired: false
 
@@ -2984,7 +2987,7 @@ stepTypes:
             attributeName: testsEnabled
             type: toggleButton
             default: true
-
+            
           - displayName: Pre-SQL
             attributeName: preSQL
             type: textBox
@@ -3111,7 +3114,7 @@ stepTypes:
             		{{ stage('Pre-SQL') }}
             		{{ config.preSQL }}
             	{% endif %}
-
+            	
                 {% if has_business_key and is_type_2 %}
 
                     {% for source in sources %}
@@ -3388,17 +3391,17 @@ stepTypes:
                             {% endif %}
                             AS "{{ col.name }}"
                             {%- if not loop.last -%}, {% endif %}
-
+                            
                         {% endfor %}
                         {{ source.join }}
-                    {% endfor %}
+                    {% endfor %}            
                 {% endif %}
-
+            	
             	{% if config.postSQL %}
             		{{ stage('Post-SQL') }}
             		{{ config.postSQL }}
             	{% endif %}
-
+            	
             {% endif %}
 
             {% if config.testsEnabled %}
