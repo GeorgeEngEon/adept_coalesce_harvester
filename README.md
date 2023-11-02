@@ -1,7 +1,7 @@
 
 # :sparkles: Adept Framework by Eon Collective :sparkles: 
 
-Welcome to the Adept framework by Eon Collective, a powerful tool for data migration and processing tasks.
+Welcome to the Adept framework by Eon Collective, a powerful tool for data migration and processing tasks. Changes
 
 ## :electric_plug: dbt_Adept_Coalesce Migration Connector :electric_plug:
 
