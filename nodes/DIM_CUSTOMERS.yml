@@ -1,5 +1,5 @@
 steps:
-  DIM_CUSTOMERS-0a8f313ff06de26e2e67edb8b49c9742b52f08eb12530c50bd05013690a5b5fa:
+  DIM_CUSTOMERS-7765ca2ae3d2b01f5431d3de11f941eeade599f51a6ad243c6e623a5a22ae81f:
     operation:
       config:
         postSQL: ""
@@ -10,7 +10,7 @@ steps:
       description: ""
       isDataVault: false
       isMultisource: false
-      locationName: DBT_GGITHIRI
+      locationName: DEO
       materializationType: Table
       metadata:
         appliedNodeTests: []
@@ -19,11 +19,11 @@ steps:
               strictMatch: true
               values: []
             appliedColumnTests:
-              hasNull: false
-              isDistinct: true
+              hasNull: true
+              isDistinct: false
             columnReference:
-              columnCounter: af4516b1a613f959c8b82a8f2e370952efa4bf60bd5a702a0ae15bd4d39e94b4
-              stepCounter: 0a8f313ff06de26e2e67edb8b49c9742b52f08eb12530c50bd05013690a5b5fa
+              columnCounter: 80aa8f536a7ece06281e1441d36a989676788025f855d5e6edb17afc736f80be
+              stepCounter: 7765ca2ae3d2b01f5431d3de11f941eeade599f51a6ad243c6e623a5a22ae81f
             dataType: ""
             description: ""
             hashColumns: []
@@ -33,8 +33,8 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 167a025e1eb3ca7e2db8df1e28a08b0d2bc3099edf83cce96dbc7060a71f0521
-                    stepCounter: 1acea52c6fe6d7345035ddc1671c1ab29695770b6d75252480425156fef87ea2
+                  - columnCounter: e4c96032f32d9713397f72c29ed2bc3bc6d5f3e4ff66d7bd7bc0380128312409
+                    stepCounter: None
                 transform: ""
         cteString: ""
         enabledColumnTestIDs: []
@@ -42,10 +42,10 @@ steps:
           - customSQL:
               customSQL: ""
             dependencies:
-              - locationName: DBT_GGITHIRI
+              - locationName: DEO
                 nodeName: DIM_CUSTOMERS_RS_5
             join:
-              joinCondition: FROM {{ ref('DBT_GGITHIRI', 'DIM_CUSTOMERS_RS_5') }} "DIM_CUSTOMERS_RS_5"
+              joinCondition: FROM {{ ref('DEO', 'DIM_CUSTOMERS_RS_5') }} "DIM_CUSTOMERS_RS_5"
               name: DIM_CUSTOMERS
               noLinkRefs: []
       name: DIM_CUSTOMERS
@@ -53,4 +53,4 @@ steps:
       schema: ""
       sqlType: Dimension
       type: sql
-    stepCounter: 0a8f313ff06de26e2e67edb8b49c9742b52f08eb12530c50bd05013690a5b5fa
+    stepCounter: 7765ca2ae3d2b01f5431d3de11f941eeade599f51a6ad243c6e623a5a22ae81f

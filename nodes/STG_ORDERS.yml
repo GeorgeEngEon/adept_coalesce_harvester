@@ -1,5 +1,5 @@
 steps:
-  STG_ORDERS-6c875d43a8d631c4b43381166ade64886166991be4712a25bb929d3d397904fb:
+  STG_ORDERS-9d36429544bba44250068385ac1d3adcc30b2635fbedfefe73b2e32c577d6868:
     operation:
       config:
         insertStrategy: INSERT
@@ -12,7 +12,7 @@ steps:
       description: ""
       isDataVault: false
       isMultisource: true
-      locationName: DBT_GGITHIRI
+      locationName: DEO
       materializationType: view
       metadata:
         appliedNodeTests: []
@@ -21,11 +21,11 @@ steps:
               strictMatch: true
               values: []
             appliedColumnTests:
-              hasNull: false
-              isDistinct: true
+              hasNull: true
+              isDistinct: false
             columnReference:
-              columnCounter: eef5d31d39b1aee1898daaa70176d1605db59a8bd01d98214bbc95d46fade5b3
-              stepCounter: 6c875d43a8d631c4b43381166ade64886166991be4712a25bb929d3d397904fb
+              columnCounter: ea5f928caba58f3b64dfb0b3af8dc48adb34ae4f4da5906d1edb338126c2336b
+              stepCounter: 9d36429544bba44250068385ac1d3adcc30b2635fbedfefe73b2e32c577d6868
             dataType: ""
             description: ""
             hashColumns: []
@@ -34,18 +34,18 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 6989100032c5c257198a8974003baceb94f8398dcdab9df88b1fa11264c2a28d
-                    stepCounter: 13dfd0651cdd5276d99ecd36161a0f701a238e72021e459ef8b3828821890d8b
+                  - columnCounter: string indices must be integers
+                    stepCounter: No Source Step id
                 transform: ""
           - acceptedValues:
               strictMatch: true
               values: []
             appliedColumnTests:
-              hasNull: false
-              isDistinct: true
+              hasNull: true
+              isDistinct: false
             columnReference:
-              columnCounter: 9d59addd16d8297a54226a7bbd8d50d9aabc0a0e629684b5d69348482416fd89
-              stepCounter: 6c875d43a8d631c4b43381166ade64886166991be4712a25bb929d3d397904fb
+              columnCounter: b28dedf0018747a8794817ba404b33fd86f9657565bdc163edf66ece6aa382c0
+              stepCounter: 9d36429544bba44250068385ac1d3adcc30b2635fbedfefe73b2e32c577d6868
             dataType: ""
             description: ""
             hashColumns: []
@@ -54,28 +54,8 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 49f0641349b950c87f55cc6d337642628915a33694296a4046e6af84dfe401ad
-                    stepCounter: 13dfd0651cdd5276d99ecd36161a0f701a238e72021e459ef8b3828821890d8b
-                transform: ""
-          - acceptedValues:
-              strictMatch: true
-              values: ['']
-            appliedColumnTests:
-              hasNull: true
-              isDistinct: false
-            columnReference:
-              columnCounter: eab35fe0bbcfa29c6f864233e53eccb07aec61bb9930b0edfd2615a9beac8c76
-              stepCounter: 6c875d43a8d631c4b43381166ade64886166991be4712a25bb929d3d397904fb
-            dataType: ""
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: STATUS
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: c1a9c40dca09fc2e9ea86596fc116a32f5147013664d28b25bac4ad8e1151555
-                    stepCounter: 13dfd0651cdd5276d99ecd36161a0f701a238e72021e459ef8b3828821890d8b
+                  - columnCounter: string indices must be integers
+                    stepCounter: No Source Step id
                 transform: ""
           - acceptedValues:
               strictMatch: true
@@ -84,28 +64,28 @@ steps:
               hasNull: true
               isDistinct: false
             columnReference:
-              columnCounter: f5a183d18307ccc1f1d33c560cde4d78d3dcbe725e0cc50d2aea0d565679c0f8
-              stepCounter: 6c875d43a8d631c4b43381166ade64886166991be4712a25bb929d3d397904fb
+              columnCounter: 480332b2aec5f954afb7e6a791aebd67984613ec8af4b90378cf5d6862d554ae
+              stepCounter: 9d36429544bba44250068385ac1d3adcc30b2635fbedfefe73b2e32c577d6868
             dataType: ""
             description: ""
             hashColumns: []
             hashDetails: null
-            name: ORDER_DATE
+            name: STATUS
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 926d990e1451ac9d31539a8e49adfc059ac85b1186be088d2851111559b347e5
-                    stepCounter: 13dfd0651cdd5276d99ecd36161a0f701a238e72021e459ef8b3828821890d8b
+                  - columnCounter: string indices must be integers
+                    stepCounter: No Source Step id
                 transform: ""
         enabledColumnTestIDs: []
         sourceMapping:
           - customSQL:
               customSQL: ""
             dependencies:
-              - locationName: JAFFLE_SHOP
-                nodeName: ORDERS
+              - locationName: No Source Model
+                nodeName: No Source Name
             join:
-                joinCondition: FROM {{ ref('JAFFLE_SHOP', 'ORDERS') }} "ORDERS"
+                joinCondition: FROM {{ ref('No Source Model', 'No Source Name') }} "No Source Name"
             name: STG_ORDERS
             noLinkRefs: []
       name: STG_ORDERS
@@ -113,4 +93,4 @@ steps:
       schema: ""
       sqlType: Stage
       type: sql
-    stepCounter: 6c875d43a8d631c4b43381166ade64886166991be4712a25bb929d3d397904fb
+    stepCounter: 9d36429544bba44250068385ac1d3adcc30b2635fbedfefe73b2e32c577d6868

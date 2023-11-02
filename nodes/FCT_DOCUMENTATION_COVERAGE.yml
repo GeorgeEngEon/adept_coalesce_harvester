@@ -1,0 +1,58 @@
+steps:
+  FCT_DOCUMENTATION_COVERAGE-2e60f642de8d3b16bc909e2e9573edce21ed87710dd030b5a88d7748dc4d9e37:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationName: DEO
+      materializationType: Table
+      metadata:
+        appliedNodeTests: []
+        columns:
+        - acceptedValues:
+            strictMatch: true
+            values: []
+          appliedColumnTests:
+            hasNull: true
+            isDistinct: false
+          columnReference:
+            columnCounter: f8280fe2bbf73b5a1b3b037ee14e8950325df36892f3aca630ec43964d75ba2a
+            stepCounter: 2e60f642de8d3b16bc909e2e9573edce21ed87710dd030b5a88d7748dc4d9e37
+          dataType: ""
+          description: ""
+          hashColumns: []
+          hashDetails: null
+          name: DOCUMENTATION_COVERAGE_PCT
+          nullable: false
+          sourceColumnReferences:
+          - columnReferences:
+            - columnCounter: c7efaa2b7921c83cf0df751732391add5b2e7973686ba2c5eca06b5f36b082a6
+              stepCounter: None
+            transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+        - customSQL:
+            customSQL: ""
+          dependencies:
+          - locationName: DEO
+            nodeName: CTE_CONVERSION_1
+          join:
+            joinCondition: |-
+              FROM {{ ref('DEO', 'FCT_DOCUMENTATION_COVERAGE_RS_4') }} "FCT_DOCUMENTATION_COVERAGE_RS_4"
+              INNER JOIN {{ ref('DEO', 'CTE_CONVERSION_1') }} "CTE_CONVERSION_1"
+              ON "FCT_DOCUMENTATION_COVERAGE_RS_4"./*COLUMN*/ = "CTE_CONVERSION_1"./*COLUMN*/
+          name: FCT_DOCUMENTATION_COVERAGE
+          noLinkRefs: []
+      name: FCT_DOCUMENTATION_COVERAGE
+      overrideSQL: false
+      schema: ""
+      sqlType: Fact
+      type: sql
+    stepCounter: 2e60f642de8d3b16bc909e2e9573edce21ed87710dd030b5a88d7748dc4d9e37

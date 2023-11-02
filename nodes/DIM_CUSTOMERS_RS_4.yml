@@ -35,7 +35,7 @@ steps:
             sourceColumnReferences:
             - columnReferences:
               - columnCounter: None
-                stepCounter: 53ee9db47b540ab80a40280b681d406ecf741b148fe68edc9216b20f624363e1
+                stepCounter: de348f5b7530d02ea5e3bbf4059ec50d29311f311ac92c8c04dc310b21379082
               transform: ""
           - acceptedValues:
               strictMatch: true
@@ -54,8 +54,8 @@ steps:
             nullable: false
             sourceColumnReferences:
             - columnReferences:
-              - columnCounter: 749d2c6e96e0997eab5d3394d712199710c6734c2229121af2fb1633c60b7a68
-                stepCounter: 53ee9db47b540ab80a40280b681d406ecf741b148fe68edc9216b20f624363e1
+              - columnCounter: fd355664e683d6ead401cfb35cbeda78953cca31d887638974550442f8d2b557
+                stepCounter: de348f5b7530d02ea5e3bbf4059ec50d29311f311ac92c8c04dc310b21379082
               transform: ""
           - acceptedValues:
               strictMatch: true
@@ -74,8 +74,8 @@ steps:
             nullable: false
             sourceColumnReferences:
             - columnReferences:
-              - columnCounter: None
-                stepCounter: 53ee9db47b540ab80a40280b681d406ecf741b148fe68edc9216b20f624363e1
+              - columnCounter: 9a53402dd3369fdbb225c23e24715cb49e361c910a48c6b4f95714e94036e065
+                stepCounter: de348f5b7530d02ea5e3bbf4059ec50d29311f311ac92c8c04dc310b21379082
               transform: ""
           - acceptedValues:
               strictMatch: true
@@ -94,8 +94,8 @@ steps:
             nullable: false
             sourceColumnReferences:
             - columnReferences:
-              - columnCounter: d6dfd2dc8d99c6c81972f609f759fb83381437a3ab1a83688e182d207f049af4
-                stepCounter: 53ee9db47b540ab80a40280b681d406ecf741b148fe68edc9216b20f624363e1
+              - columnCounter: None
+                stepCounter: de348f5b7530d02ea5e3bbf4059ec50d29311f311ac92c8c04dc310b21379082
               transform: ""
           - acceptedValues:
               strictMatch: true
@@ -114,8 +114,8 @@ steps:
             nullable: false
             sourceColumnReferences:
             - columnReferences:
-              - columnCounter: None
-                stepCounter: 53ee9db47b540ab80a40280b681d406ecf741b148fe68edc9216b20f624363e1
+              - columnCounter: a3dab37cbcd3867e6de796a14eeae3f59c3052ce3038d3a90d045db16389cd96
+                stepCounter: de348f5b7530d02ea5e3bbf4059ec50d29311f311ac92c8c04dc310b21379082
               transform: ""
           - acceptedValues:
               strictMatch: true
@@ -134,8 +134,8 @@ steps:
             nullable: false
             sourceColumnReferences:
             - columnReferences:
-              - columnCounter: 0d09518dcf21efd1656b89c5bee65c4801f624720a2492b15136a3146f6054c7
-                stepCounter: 53ee9db47b540ab80a40280b681d406ecf741b148fe68edc9216b20f624363e1
+              - columnCounter: None
+                stepCounter: de348f5b7530d02ea5e3bbf4059ec50d29311f311ac92c8c04dc310b21379082
               transform: ""
           - acceptedValues:
               strictMatch: true
@@ -154,8 +154,8 @@ steps:
             nullable: false
             sourceColumnReferences:
             - columnReferences:
-              - columnCounter: 0ccb8813503d81d14720a758cff4e6c452cf66c6d36a4f5e5f07c0b58932cc0c
-                stepCounter: 53ee9db47b540ab80a40280b681d406ecf741b148fe68edc9216b20f624363e1
+              - columnCounter: None
+                stepCounter: de348f5b7530d02ea5e3bbf4059ec50d29311f311ac92c8c04dc310b21379082
               transform: ""
           - acceptedValues:
               strictMatch: true
@@ -174,8 +174,8 @@ steps:
             nullable: false
             sourceColumnReferences:
             - columnReferences:
-              - columnCounter: d3a6374a80bf30cfdb1e20c6bc56aac9c46e10d740b490eccd74d04385f3b066
-                stepCounter: 53ee9db47b540ab80a40280b681d406ecf741b148fe68edc9216b20f624363e1
+              - columnCounter: None
+                stepCounter: de348f5b7530d02ea5e3bbf4059ec50d29311f311ac92c8c04dc310b21379082
               transform: ""
         enabledColumnTestIDs: []
         sourceMapping:
@@ -183,9 +183,9 @@ steps:
               customSQL: ""
             dependencies:
               - locationName: DBT_GGITHIRI
-                nodeName: CTE_CUSTOMER_ORDERS_DIM_1
+                nodeName: CTE_CUSTOMERS_DIM_1
             join:
-                joinCondition: FROM {{ ref('DBT_GGITHIRI', 'CTE_CUSTOMER_ORDERS_DIM_1') }} "CTE_CUSTOMER_ORDERS_DIM_1"
+                joinCondition: FROM {{ ref('DBT_GGITHIRI', 'CTE_CUSTOMERS_DIM_1') }} "CTE_CUSTOMERS_DIM_1"
             name: DIM_CUSTOMERS_RS_4
             noLinkRefs: []
       name: DIM_CUSTOMERS_RS_4

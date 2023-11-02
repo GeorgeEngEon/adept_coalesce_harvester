@@ -1,5 +1,5 @@
 steps:
-  INT_ORDERS_PIVOTED-7ad88035bfc927a6d7452a362cc2b2070981bda24b3af62bf1abbdd91966558e:
+  INT_ORDERS_PIVOTED-142dd859f9473da5abd82747e47c6b7def2896bfce6d72b1528228cbc4c7a5c4:
     operation:
       config:
         postSQL: ""
@@ -10,7 +10,7 @@ steps:
       description: ""
       isDataVault: false
       isMultisource: false
-      locationName: DBT_GGITHIRI
+      locationName: DEO
       materializationType: Table
       metadata:
         appliedNodeTests: []
@@ -19,11 +19,11 @@ steps:
               strictMatch: true
               values: []
             appliedColumnTests:
-              hasNull: false
-              isDistinct: true
+              hasNull: true
+              isDistinct: false
             columnReference:
-              columnCounter: f76883478feb3615c2dd562b895760727b1ba490c05d15c2adbdea5d61d91f10
-              stepCounter: 7ad88035bfc927a6d7452a362cc2b2070981bda24b3af62bf1abbdd91966558e
+              columnCounter: 990e5dc774762847c01f68c2f297b3ba0eab8a29dfc25b0447fa75d1377e6468
+              stepCounter: 142dd859f9473da5abd82747e47c6b7def2896bfce6d72b1528228cbc4c7a5c4
             dataType: ""
             description: ""
             hashColumns: []
@@ -33,8 +33,8 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 6dcaf3a2605b595d2d9c0538080fa18f72c65b3cbff34e2af5da1eb1b1e2a25e
-                    stepCounter: 97795e3e8496b07009f21d234c9df5c03816e6d1a05c8d22af8243ca1b11e471
+                  - columnCounter: 7fc928a97437ce12f9c09ec5ab08a5c76d110e25bd4dadbdc07f666190d35376
+                    stepCounter: None
                 transform: ""
         cteString: ""
         enabledColumnTestIDs: []
@@ -42,10 +42,10 @@ steps:
           - customSQL:
               customSQL: ""
             dependencies:
-              - locationName: DBT_GGITHIRI
+              - locationName: DEO
                 nodeName: INT_ORDERS__PIVOTED_RS_3
             join:
-              joinCondition: FROM {ref(DBT_GGITHIRI,INT_ORDERS__PIVOTED_RS_3)} "INT_ORDERS__PIVOTED_RS_3"
+              joinCondition: FROM {ref(DEO,INT_ORDERS__PIVOTED_RS_3)} "INT_ORDERS__PIVOTED_RS_3"
             name: DIM_INT_ORDERS__PIVOTED
             noLinkRefs: []
       name: DIM_INT_ORDERS__PIVOTED
@@ -53,4 +53,4 @@ steps:
       schema: ""
       sqlType: Dimension
       type: sql
-    stepCounter: 7ad88035bfc927a6d7452a362cc2b2070981bda24b3af62bf1abbdd91966558e
+    stepCounter: 142dd859f9473da5abd82747e47c6b7def2896bfce6d72b1528228cbc4c7a5c4

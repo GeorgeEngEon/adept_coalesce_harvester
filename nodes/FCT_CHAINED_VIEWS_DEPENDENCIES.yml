@@ -1,0 +1,58 @@
+steps:
+  FCT_CHAINED_VIEWS_DEPENDENCIES-5d9863ff9f693f57d84f8ec4ebd85be12ae351b6640540f2a515116f6a8ac7dd:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationName: DEO
+      materializationType: Table
+      metadata:
+        appliedNodeTests: []
+        columns:
+        - acceptedValues:
+            strictMatch: true
+            values: []
+          appliedColumnTests:
+            hasNull: true
+            isDistinct: false
+          columnReference:
+            columnCounter: ad0dccd3c600d5c9166b21ab77b1ca04bc497aca417edd1c821f3c3734fe6dfb
+            stepCounter: 5d9863ff9f693f57d84f8ec4ebd85be12ae351b6640540f2a515116f6a8ac7dd
+          dataType: ""
+          description: ""
+          hashColumns: []
+          hashDetails: null
+          name: DISTANCE
+          nullable: false
+          sourceColumnReferences:
+          - columnReferences:
+            - columnCounter: 33045adbc89ac9f2ba1e5c70242c28d49828c40e65d11835b1bb51e1b9ed381b
+              stepCounter: None
+            transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+        - customSQL:
+            customSQL: ""
+          dependencies:
+          - locationName: DEO
+            nodeName: FCT_CHAINED_VIEWS_DEPENDENCIES_RS_3
+          join:
+            joinCondition: |-
+              FROM {{ ref('DEO', 'FCT_CHAINED_VIEWS_DEPENDENCIES_RS_3') }} "FCT_CHAINED_VIEWS_DEPENDENCIES_RS_3"
+              INNER JOIN {{ ref('DEO', '') }} ""
+              ON "FCT_CHAINED_VIEWS_DEPENDENCIES_RS_3"./*COLUMN*/ = ""./*COLUMN*/
+          name: FCT_CHAINED_VIEWS_DEPENDENCIES
+          noLinkRefs: []
+      name: FCT_CHAINED_VIEWS_DEPENDENCIES
+      overrideSQL: false
+      schema: ""
+      sqlType: Fact
+      type: sql
+    stepCounter: 5d9863ff9f693f57d84f8ec4ebd85be12ae351b6640540f2a515116f6a8ac7dd

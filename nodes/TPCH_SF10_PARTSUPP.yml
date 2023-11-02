@@ -1,0 +1,19 @@
+steps:
+  PARTSUPP-66794a122ba7bfb7645abf677ae736297fdc80d6e27c49bddaa6c7ed27bd9b88:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: TPCH_SF10
+      metadata:
+        columns:
+        join:
+          joinCondition: FROM { ref(f'TPCH_SF10', 'PARTSUPP') }
+      name: PARTSUPP
+      schema: ""
+      sqlType: Source
+      table: PARTSUPP
+      type: sourceInput
+    stepCounter: 66794a122ba7bfb7645abf677ae736297fdc80d6e27c49bddaa6c7ed27bd9b88

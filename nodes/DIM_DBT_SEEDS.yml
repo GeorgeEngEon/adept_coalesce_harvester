@@ -1,0 +1,266 @@
+steps:
+  DIM_DBT__SEEDS-bcb7405b55bd0d86df7184a085f4c2583b18ee9af5092e19f3a8a463e6db5767:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationName: DEO
+      materializationType: Table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 0a03e92b4eebcacf78e60c64a79c392b7fa50bbbf6136fbc21956260b37d0f42
+              stepCounter: bcb7405b55bd0d86df7184a085f4c2583b18ee9af5092e19f3a8a463e6db5767
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            isBusinessKey: true
+            name: SCHEMA
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d3539b119ac1aedb023fdef035bcccb96edd941cde31b53e68b3a7821c83f91e
+                    stepCounter: None
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 23292df52380981aa6b90019c3b06c8723a150435cebe719e25c0c43525980ee
+              stepCounter: bcb7405b55bd0d86df7184a085f4c2583b18ee9af5092e19f3a8a463e6db5767
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            isBusinessKey: true
+            name: COMMAND_INVOCATION_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5b50c01a0cfb8b8af5ac92ab1d89cd3ba26ecef789ad6739dec843320b8bf023
+                    stepCounter: None
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: c343d525c631e60320b3fbace70f474d3954731d64417f8fb2edfe6e29f60b5e
+              stepCounter: bcb7405b55bd0d86df7184a085f4c2583b18ee9af5092e19f3a8a463e6db5767
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            isBusinessKey: true
+            name: PATH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 067e3f3b0fa7eff8361bdf3c5a8c234bb855556210a4fe933c0ea6728b91c51d
+                    stepCounter: None
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: c5332135a315c00d957d3e156ea92417c465d9c5af1078498b1ea490e8279fe2
+              stepCounter: bcb7405b55bd0d86df7184a085f4c2583b18ee9af5092e19f3a8a463e6db5767
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            isBusinessKey: true
+            name: SEED_EXECUTION_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 56b21d1d1a5c2040402c79fa4d4e3601c4bb86401e491d4b310cc4d8de046a88
+                    stepCounter: None
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: e59d0c2404b5219748786364287b916d7ded4d00d29f9356e256bf44978d696e
+              stepCounter: bcb7405b55bd0d86df7184a085f4c2583b18ee9af5092e19f3a8a463e6db5767
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            isBusinessKey: true
+            name: DATABASE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 00b3ac9c7f925bf92329415c4fa06ba1190cf7fee2d6c9a4964f3552d2f94eab
+                    stepCounter: None
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 05b0620b8417c52c89832702177576658fa77d76d12c3cf22f939a105945b8f3
+              stepCounter: bcb7405b55bd0d86df7184a085f4c2583b18ee9af5092e19f3a8a463e6db5767
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            isBusinessKey: true
+            name: RUN_STARTED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fe525e47616df8f5cc537a052496213e4b2f10086a70c3a86294fbc851e1371b
+                    stepCounter: None
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 437dea8524a1d473b59a884a28774fec6534a72e315e66a52c3d762f86be714a
+              stepCounter: bcb7405b55bd0d86df7184a085f4c2583b18ee9af5092e19f3a8a463e6db5767
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            isBusinessKey: true
+            name: CHECKSUM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2b82cea09ea90c1566dd65bf16c56b6719cca812ea2a39e229f41c4ae73d7bb0
+                    stepCounter: None
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 39441df3b2930c46ca29e0537a97714a1a5e37d9ddceb5ca80563e6ddf574d1e
+              stepCounter: bcb7405b55bd0d86df7184a085f4c2583b18ee9af5092e19f3a8a463e6db5767
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            isBusinessKey: true
+            name: NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 81f8f89245d46db82304d3e69702754e2337a7831f1ab9202ab638c6c12f298a
+                    stepCounter: None
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 7e78aa73b98c824071ba9aff0bbf92679f7ac27b3e8f7ee782d38770031e6e6d
+              stepCounter: bcb7405b55bd0d86df7184a085f4c2583b18ee9af5092e19f3a8a463e6db5767
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            isBusinessKey: true
+            name: PACKAGE_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8076f46ae559dada23482b7e8a13710ce1195454fc06cda6761dff815d018a82
+                    stepCounter: None
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 0e70eae49082ed886a3e0ea96e7b2adedca05598ba52021992752382d9eae600
+              stepCounter: bcb7405b55bd0d86df7184a085f4c2583b18ee9af5092e19f3a8a463e6db5767
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            isBusinessKey: true
+            name: ALIAS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 107882fd8ac028f3aab776f720e0e0ec43f7f8707ea11e6b3367a05d5f16bc5a
+                    stepCounter: None
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 8ae2be67430243737e2f5f71059a3480d4cf298686b17f1b028ad6965a796093
+              stepCounter: bcb7405b55bd0d86df7184a085f4c2583b18ee9af5092e19f3a8a463e6db5767
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            isBusinessKey: true
+            name: NODE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1f5b18591ad28a0a80890b5389227bf2cfaf265350de132b1dfb0dc03d6cb684
+                    stepCounter: None
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DEO
+                nodeName: DIM_DBT__SEEDS_RS_3
+            join:
+              joinCondition: FROM {{ ref('DEO', 'DIM_DBT__SEEDS_RS_3') }} "DIM_DBT__SEEDS_RS_3"
+              name: DIM_DBT__SEEDS
+              noLinkRefs: []
+      name: DIM_DBT__SEEDS
+      overrideSQL: false
+      schema: ""
+      sqlType: Dimension
+      type: sql
+    stepCounter: bcb7405b55bd0d86df7184a085f4c2583b18ee9af5092e19f3a8a463e6db5767

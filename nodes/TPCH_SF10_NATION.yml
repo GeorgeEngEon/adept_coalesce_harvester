@@ -1,0 +1,19 @@
+steps:
+  NATION-eab04a1bcb7435dd44351d80d9779beecc6626f4c25ba713d9191d01d284900a:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: TPCH_SF10
+      metadata:
+        columns:
+        join:
+          joinCondition: FROM { ref(f'TPCH_SF10', 'NATION') }
+      name: NATION
+      schema: ""
+      sqlType: Source
+      table: NATION
+      type: sourceInput
+    stepCounter: eab04a1bcb7435dd44351d80d9779beecc6626f4c25ba713d9191d01d284900a

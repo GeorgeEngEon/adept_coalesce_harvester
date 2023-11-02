@@ -1,0 +1,296 @@
+steps:
+  STG_DBT__SNAPSHOTS-c0ea9ab99643a79b863f069f0ef6e85bb891966c190ac8110dd8b1721c520aaf:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: true
+      locationName: DEO
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 3ce032e8b6ebf707d3ab9186091d683800b5e518562cf22c47993fb8109f7b04
+              stepCounter: c0ea9ab99643a79b863f069f0ef6e85bb891966c190ac8110dd8b1721c520aaf
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SCHEMA
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: string indices must be integers
+                    stepCounter: No Source Step id
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 7122beff8f53e320a30cbd902e9d07daae1e944285140a4989744483fd2c157d
+              stepCounter: c0ea9ab99643a79b863f069f0ef6e85bb891966c190ac8110dd8b1721c520aaf
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: COMMAND_INVOCATION_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: string indices must be integers
+                    stepCounter: No Source Step id
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: c1612fbf0aed67e7af331631ccf0fa03dd09913005a56fa11c59b60e22c9a560
+              stepCounter: c0ea9ab99643a79b863f069f0ef6e85bb891966c190ac8110dd8b1721c520aaf
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: RUN_STARTED_AT
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: string indices must be integers
+                    stepCounter: No Source Step id
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 3ae59f9b6dcf2be05127c334ee42853eab3a8fbad79b3f7b23eb3f0a4fbab7a9
+              stepCounter: c0ea9ab99643a79b863f069f0ef6e85bb891966c190ac8110dd8b1721c520aaf
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: DEPENDS_ON_NODES
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: string indices must be integers
+                    stepCounter: No Source Step id
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 182d1c0544b4b7e00222f530bff684357b3042fb8b9b0ad5ef50a9551dec08bf
+              stepCounter: c0ea9ab99643a79b863f069f0ef6e85bb891966c190ac8110dd8b1721c520aaf
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PATH
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: string indices must be integers
+                    stepCounter: No Source Step id
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: f84c1b4cca4cafa476baaba0805e685b1708b03899e70315067bd586a9a0fc7c
+              stepCounter: c0ea9ab99643a79b863f069f0ef6e85bb891966c190ac8110dd8b1721c520aaf
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: DATABASE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: string indices must be integers
+                    stepCounter: No Source Step id
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 04b9d4006f3325108b8122f5d854b7abbdce73f6cb3951e0d3e1a37b1295b50d
+              stepCounter: c0ea9ab99643a79b863f069f0ef6e85bb891966c190ac8110dd8b1721c520aaf
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SNAPSHOT_EXECUTION_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: string indices must be integers
+                    stepCounter: No Source Step id
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: b92dfc62e13bd1f344a6d0e0e12aed476f04f5e53a88d410c0be94f05f8ce5f4
+              stepCounter: c0ea9ab99643a79b863f069f0ef6e85bb891966c190ac8110dd8b1721c520aaf
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CHECKSUM
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: string indices must be integers
+                    stepCounter: No Source Step id
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 43c0c2d2b24ccb99a96f3fd039700a58cbd7e222bc44099250cafb105626335a
+              stepCounter: c0ea9ab99643a79b863f069f0ef6e85bb891966c190ac8110dd8b1721c520aaf
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: NAME
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: string indices must be integers
+                    stepCounter: No Source Step id
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 6e6d4d1785272531f7bf880ee183b9d17b8b6d1146c83567dc58b73481b4a0e1
+              stepCounter: c0ea9ab99643a79b863f069f0ef6e85bb891966c190ac8110dd8b1721c520aaf
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PACKAGE_NAME
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: string indices must be integers
+                    stepCounter: No Source Step id
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 0692c55f279f26adc5df7cbf633689bc7180f4421a7a2e0ab8663a53d259702d
+              stepCounter: c0ea9ab99643a79b863f069f0ef6e85bb891966c190ac8110dd8b1721c520aaf
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ALIAS
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: string indices must be integers
+                    stepCounter: No Source Step id
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 008b8fa056fdb4476bb47b2a9f0fcc7edf0facee2228f45676e506b618a4d58e
+              stepCounter: c0ea9ab99643a79b863f069f0ef6e85bb891966c190ac8110dd8b1721c520aaf
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: STRATEGY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: string indices must be integers
+                    stepCounter: No Source Step id
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: d6ca8283f0b116ca2a20363bdc03be0977ff5354fa374f636f393370e4cb8dc2
+              stepCounter: c0ea9ab99643a79b863f069f0ef6e85bb891966c190ac8110dd8b1721c520aaf
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: NODE_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: string indices must be integers
+                    stepCounter: No Source Step id
+                transform: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: No Source Model
+                nodeName: No Source Name
+            join:
+                joinCondition: FROM {{ ref('No Source Model', 'No Source Name') }} "No Source Name"
+            name: STG_DBT__SNAPSHOTS
+            noLinkRefs: []
+      name: STG_DBT__SNAPSHOTS
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: c0ea9ab99643a79b863f069f0ef6e85bb891966c190ac8110dd8b1721c520aaf

@@ -1,0 +1,58 @@
+steps:
+  FCT_CUSTOMER_ORDERS-a6a22fe279be0b631f35a876a06961c470a6dbc053b5a7f17cc5ea5c3699c2da:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationName: DEO
+      materializationType: Table
+      metadata:
+        appliedNodeTests: []
+        columns:
+        - acceptedValues:
+            strictMatch: true
+            values: []
+          appliedColumnTests:
+            hasNull: true
+            isDistinct: false
+          columnReference:
+            columnCounter: d8222404b52dbb0a100e998d499c94a0691ea9f69e8c3b048c0a4f370160759a
+            stepCounter: a6a22fe279be0b631f35a876a06961c470a6dbc053b5a7f17cc5ea5c3699c2da
+          dataType: ""
+          description: ""
+          hashColumns: []
+          hashDetails: null
+          name: ORDER_ID
+          nullable: false
+          sourceColumnReferences:
+          - columnReferences:
+            - columnCounter: cff18cfd499702ffb8461baec7f3aa837c51d7921991d9fab53f4224c342c157
+              stepCounter: None
+            transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+        - customSQL:
+            customSQL: ""
+          dependencies:
+          - locationName: DEO
+            nodeName: FCT_CUSTOMER_ORDERS_RS_4
+          join:
+            joinCondition: |-
+              FROM {{ ref('DEO', 'FCT_CUSTOMER_ORDERS_RS_4') }} "FCT_CUSTOMER_ORDERS_RS_4"
+              INNER JOIN {{ ref('DEO', '') }} ""
+              ON "FCT_CUSTOMER_ORDERS_RS_4"./*COLUMN*/ = ""./*COLUMN*/
+          name: FCT_CUSTOMER_ORDERS
+          noLinkRefs: []
+      name: FCT_CUSTOMER_ORDERS
+      overrideSQL: false
+      schema: ""
+      sqlType: Fact
+      type: sql
+    stepCounter: a6a22fe279be0b631f35a876a06961c470a6dbc053b5a7f17cc5ea5c3699c2da
