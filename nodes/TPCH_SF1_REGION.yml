@@ -1,0 +1,36 @@
+steps:
+  REGION-91e43f3255070d3353e1d3cabd01a3d096c1fdc8c1c9175a5e1fe5bfb81a4080:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: TPCH_SF1
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: ac1c48916307b915c0d2ce4c918651c5ffe01f86e3939ba82708790928f1519e
+              stepCounter: 91e43f3255070d3353e1d3cabd01a3d096c1fdc8c1c9175a5e1fe5bfb81a4080
+            config: 
+            dataType: 
+            defaultValue: ""
+            description: ""
+            name: *
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM { ref(f'TPCH_SF1', 'REGION') }
+      name: REGION
+      schema: ""
+      sqlType: Source
+      table: REGION
+      type: sourceInput
+    stepCounter: 91e43f3255070d3353e1d3cabd01a3d096c1fdc8c1c9175a5e1fe5bfb81a4080
