@@ -1,0 +1,36 @@
+steps:
+  PARTSUPP-69f14bb12f99f899f6543b633a89587f94ba63d83201518946b227f9d72bb2a2:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: TPCH_SF1
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 8a3d1e87c7b515803b4a206b0a6f4a03649c5d1c07f1e6677243edc00d93de54
+              stepCounter: 69f14bb12f99f899f6543b633a89587f94ba63d83201518946b227f9d72bb2a2
+            config: 
+            dataType: 
+            defaultValue: ""
+            description: ""
+            name: *
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM { ref(f'TPCH_SF1', 'PARTSUPP') }
+      name: PARTSUPP
+      schema: ""
+      sqlType: Source
+      table: PARTSUPP
+      type: sourceInput
+    stepCounter: 69f14bb12f99f899f6543b633a89587f94ba63d83201518946b227f9d72bb2a2
