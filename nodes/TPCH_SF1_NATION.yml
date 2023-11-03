@@ -1,0 +1,36 @@
+steps:
+  NATION-75703de5c379acfa5da3ef481ec8fc59ff69194362a98c2146af42d1c9e4f1b7:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: TPCH_SF1
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: d89739b53c7e1301e3c2bcd778eb32abe7bfdd620c09e4cb36e782be8b22ce40
+              stepCounter: 75703de5c379acfa5da3ef481ec8fc59ff69194362a98c2146af42d1c9e4f1b7
+            config: 
+            dataType: 
+            defaultValue: ""
+            description: ""
+            name: *
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM { ref(f'TPCH_SF1', 'NATION') }
+      name: NATION
+      schema: ""
+      sqlType: Source
+      table: NATION
+      type: sourceInput
+    stepCounter: 75703de5c379acfa5da3ef481ec8fc59ff69194362a98c2146af42d1c9e4f1b7
