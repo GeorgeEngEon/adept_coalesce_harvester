@@ -1,0 +1,51 @@
+steps:
+  HUB_LINEITEM-c9819817e37a15661f610538c4d0baf8eba6a9d550b16929b33e0c5d5a060395:
+    operation:
+      config:
+        disable_hwm: true
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: OFFICE_VAULT
+      materializationType: Table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: b91e3174945209a3dae57b1e470d184426e26557b55bb8f27d7679c4bc657cbe
+              stepCounter: c9819817e37a15661f610538c4d0baf8eba6a9d550b16929b33e0c5d5a060395
+            config:
+              is_Hub_hk: true
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LINEITEM_PK
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 57ab7ef244c66dbb7b404c811905935b71cdd2926b3370ed6fe89cda011dcf0e
+                    stepCounter: 7abb27b182c99a9831453e32c4a603e78156975bc3640da270d14e008a4ce3a6
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: OFFICE_VAULT
+                nodeName: V_STG_ORDERS
+            join:
+              joinCondition: FROM {{ ref('OFFICE_VAULT', 'V_STG_ORDERS') }} "V_STG_ORDERS"
+              name: HUB_LINEITEM
+              noLinkRefs: []
+      name: HUB_LINEITEM
+      overrideSQL: false
+      schema: ""
+      sqlType: "6"
+      type: sql
+    stepCounter: c9819817e37a15661f610538c4d0baf8eba6a9d550b16929b33e0c5d5a060395
