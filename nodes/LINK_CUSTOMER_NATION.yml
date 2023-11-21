@@ -1,0 +1,51 @@
+steps:
+  LINK_CUSTOMER_NATION-84ea583b9a31e48d3b3d5573193a2ee6a6f0add70139922aeb219a817012f919:
+    operation:
+      config:
+        disable_hwm: true
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: OFFICE_VAULT
+      materializationType: Table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: da263931053a64846801eef7c3122876c7ba5003a7d5c751d4d7fed116f2e092
+              stepCounter: 84ea583b9a31e48d3b3d5573193a2ee6a6f0add70139922aeb219a817012f919
+            config:
+              is_Hub_hk: true
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LINK_CUSTOMER_NATION_PK
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7df64d86780d2376ce7c0ee6b0ee05c840352e34dca4607f7a0f0e39b9ebb7f6
+                    stepCounter: 7abb27b182c99a9831453e32c4a603e78156975bc3640da270d14e008a4ce3a6
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: OFFICE_VAULT
+                nodeName: V_STG_ORDERS
+            join:
+              joinCondition: FROM {{ ref('OFFICE_VAULT', 'V_STG_ORDERS') }} "V_STG_ORDERS"
+              name: LINK_CUSTOMER_NATION
+              noLinkRefs: []
+      name: LINK_CUSTOMER_NATION
+      overrideSQL: false
+      schema: ""
+      sqlType: "6"
+      type: sql
+    stepCounter: 84ea583b9a31e48d3b3d5573193a2ee6a6f0add70139922aeb219a817012f919
