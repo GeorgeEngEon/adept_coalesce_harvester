@@ -1,0 +1,51 @@
+steps:
+  LINK_INVENTORY-afc1fe9bbc0e6062893ff5e33343d92003e95a6f65d164d7caa84c238394b3a1:
+    operation:
+      config:
+        disable_hwm: true
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: OFFICE_VAULT
+      materializationType: Table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 1b517093ee6d0d1194414fb6cc34a221dbd8938b8051c897ae104aa68423ca3a
+              stepCounter: afc1fe9bbc0e6062893ff5e33343d92003e95a6f65d164d7caa84c238394b3a1
+            config:
+              is_Hub_hk: true
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: INVENTORY_PK
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 93f408fbc899091aae8232ac961f55c8504977eb059648330ad87c7a40e943a6
+                    stepCounter: 2022516dab311540059a47f94400a22611103353f33771eabfe27c0a94d26639
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: OFFICE_VAULT
+                nodeName: V_STG_INVENTORY
+            join:
+              joinCondition: FROM {{ ref('OFFICE_VAULT', 'V_STG_INVENTORY') }} "V_STG_INVENTORY"
+              name: LINK_INVENTORY
+              noLinkRefs: []
+      name: LINK_INVENTORY
+      overrideSQL: false
+      schema: ""
+      sqlType: "6"
+      type: sql
+    stepCounter: afc1fe9bbc0e6062893ff5e33343d92003e95a6f65d164d7caa84c238394b3a1
