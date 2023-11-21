@@ -1,0 +1,95 @@
+steps:
+  SAT_ORDER_CUST_NATION_DETAILS-72a2670fab2797ebc49df52cc7fd6a34555caa632fbe4e989a4fea81b706c7d0:
+    operation:
+      config:
+        disable_hwm: true
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: OFFICE_VAULT
+      materializationType: Table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 9d6635818221055b3d27810703221c0cf877730d4800ff3d8ea114e9c44fd147
+              stepCounter: 72a2670fab2797ebc49df52cc7fd6a34555caa632fbe4e989a4fea81b706c7d0
+            
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CUSTOMER_NATION_HASHDIFF
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c108b2c25c523d1ea67894f7d8995b8ab06af05f68cadbc062e4cbd651dea349
+                    stepCounter: 7abb27b182c99a9831453e32c4a603e78156975bc3640da270d14e008a4ce3a6
+                transform: ""
+          - columnReference:
+              columnCounter: f94acc257938d603702854063910b4369b36ee7f1dfbce2dfb9d34ea5940d133
+              stepCounter: 72a2670fab2797ebc49df52cc7fd6a34555caa632fbe4e989a4fea81b706c7d0
+            
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CUSTOMER_PK
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c3ca0d43986102efdeb3d30c92a5d009553b4ffe2ef4cddc74618297337aae19
+                    stepCounter: 7abb27b182c99a9831453e32c4a603e78156975bc3640da270d14e008a4ce3a6
+                transform: ""
+          - columnReference:
+              columnCounter: 1479e365b23a773e4d5a1779333978e0df9bc844b69f384455184708786bcfd3
+              stepCounter: 72a2670fab2797ebc49df52cc7fd6a34555caa632fbe4e989a4fea81b706c7d0
+            
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LOAD_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6d451c43729f8ed8d7cd985da8b979c7fccb0b6455d0734ec3d6ac0e9d362199
+                    stepCounter: 7abb27b182c99a9831453e32c4a603e78156975bc3640da270d14e008a4ce3a6
+                transform: ""
+          - columnReference:
+              columnCounter: 587779ea6736d02e9e21085d6f32f63fbadb6ced2377929a3e873bc09a19e20a
+              stepCounter: 72a2670fab2797ebc49df52cc7fd6a34555caa632fbe4e989a4fea81b706c7d0
+            
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: RELATIONROWS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: No_Source_Column_Counter
+                    stepCounter: No_Source_Step_id
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: OFFICE_VAULT
+                nodeName: No_Source_Name
+            join:
+              joinCondition: FROM {{ ref('OFFICE_VAULT', 'No_Source_Name') }} "No_Source_Name"
+              name: SAT_ORDER_CUST_NATION_DETAILS
+              noLinkRefs: []
+      name: SAT_ORDER_CUST_NATION_DETAILS
+      overrideSQL: false
+      schema: ""
+      sqlType: "6"
+      type: sql
+    stepCounter: 72a2670fab2797ebc49df52cc7fd6a34555caa632fbe4e989a4fea81b706c7d0
