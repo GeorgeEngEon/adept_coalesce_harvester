@@ -1,0 +1,95 @@
+steps:
+  SAT_INV_PART_DETAILS-6cf01862c001106a1125fb6e01486dfffab6c9b15c24fc93e6a3f45937832c56:
+    operation:
+      config:
+        disable_hwm: true
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: OFFICE_VAULT
+      materializationType: Table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 65e79b366b1b3a9c49bd78f55db6c80c10bffa0af9774eeb715b911244e5969d
+              stepCounter: 6cf01862c001106a1125fb6e01486dfffab6c9b15c24fc93e6a3f45937832c56
+            
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LOAD_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 053dba342a272f1f37d407f1660b76cd18751d60d3212155107284e4109c7037
+                    stepCounter: 2022516dab311540059a47f94400a22611103353f33771eabfe27c0a94d26639
+                transform: ""
+          - columnReference:
+              columnCounter: 4d5e5e116538bbe8ea1d9499bb0f38676f2df85a050735e5725d09040a466620
+              stepCounter: 6cf01862c001106a1125fb6e01486dfffab6c9b15c24fc93e6a3f45937832c56
+            
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PART_HASHDIFF
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 29433ca14ea30e6a4da1dbe7691f0967b2d67a8b95468c45d780b73e7d8a4641
+                    stepCounter: 2022516dab311540059a47f94400a22611103353f33771eabfe27c0a94d26639
+                transform: ""
+          - columnReference:
+              columnCounter: cc08b59db60c4d3013a4a28ba319261fb11322eddf5ea21185eba5a509dc1b3b
+              stepCounter: 6cf01862c001106a1125fb6e01486dfffab6c9b15c24fc93e6a3f45937832c56
+            
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PART_PK
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e0e982514be8fdaf55c9be0c63598329d45dd918909bd41d4511e03733321b69
+                    stepCounter: 2022516dab311540059a47f94400a22611103353f33771eabfe27c0a94d26639
+                transform: ""
+          - columnReference:
+              columnCounter: 22e9da15e76cf28a2c95f5084f62a2710e3241bc641c922cd9a4858a72821a65
+              stepCounter: 6cf01862c001106a1125fb6e01486dfffab6c9b15c24fc93e6a3f45937832c56
+            
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: RELATIONROWS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: No_Source_Column_Counter
+                    stepCounter: No_Source_Step_id
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: OFFICE_VAULT
+                nodeName: No_Source_Name
+            join:
+              joinCondition: FROM {{ ref('OFFICE_VAULT', 'No_Source_Name') }} "No_Source_Name"
+              name: SAT_INV_PART_DETAILS
+              noLinkRefs: []
+      name: SAT_INV_PART_DETAILS
+      overrideSQL: false
+      schema: ""
+      sqlType: "6"
+      type: sql
+    stepCounter: 6cf01862c001106a1125fb6e01486dfffab6c9b15c24fc93e6a3f45937832c56
