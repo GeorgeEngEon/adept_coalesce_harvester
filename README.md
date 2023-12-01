@@ -11,76 +11,100 @@ data migration and processing tasks.
 
 ## :file_folder: Migrated Tables/Views  :
 
-- `HUB_LINEITEM`:
+- `DIM_CUSTOMERS_RS_4`:
+        This is a dimension node,
+        placeholder descriptions` file in the `nodes/` directory.
+- `FCT_ORDERS_RS_2`:
+        This is a fact node,
+        placeholder descriptions` file in the `nodes/` directory.
+- `DIM_CUSTOMERS_RS_1`:
+        This is a dimension node,
+        placeholder descriptions` file in the `nodes/` directory.
+- `FCT_ORDERS_RS_4`:
+        This is a fact node,
+        placeholder descriptions` file in the `nodes/` directory.
+- `CTE_CUSTOMER_ORDERS_DIM_1`:
         This is a Others node,
         placeholder descriptions` file in the `nodes/` directory.
-- `SAT_ORDER_CUST_REGION_DETAILS`:
+- `DIM_CUSTOMERS_RS_2`:
+        This is a dimension node,
+        placeholder descriptions` file in the `nodes/` directory.
+- `INT_ORDERS_PIVOTED_RS_1`:
+        This is a intermediate node,
+        placeholder descriptions` file in the `nodes/` directory.
+- `CTE_PAYMENTS_1`:
         This is a Others node,
         placeholder descriptions` file in the `nodes/` directory.
-- `SAT_ORDER_LINEITEM_DETAILS`:
+- `STRIPE_PAYMENT`:
         This is a Others node,
         placeholder descriptions` file in the `nodes/` directory.
-- `SAT_ORDER_CUST_NATION_DETAILS`:
+- `JAFFLE_SHOP_ORDERS`:
         This is a Others node,
         placeholder descriptions` file in the `nodes/` directory.
-- `SAT_INV_SUPP_REGION_DETAILS`:
+- `FCT_ORDERS_RS_5`:
+        This is a fact node,
+        placeholder descriptions` file in the `nodes/` directory.
+- `CTE_FINAL_DIM_1`:
         This is a Others node,
         placeholder descriptions` file in the `nodes/` directory.
-- `HUB_ORDER`:
+- `DIM_CUSTOMERS`:
+        This is a dimension node,
+        placeholder descriptions` file in the `nodes/` directory.
+- `FCT_ORDERS_RS_1`:
+        This is a fact node,
+        placeholder descriptions` file in the `nodes/` directory.
+- `INT_ORDERS_PIVOTED_RS_3`:
+        This is a intermediate node,
+        placeholder descriptions` file in the `nodes/` directory.
+- `DIM_CUSTOMERS_RS_5`:
+        This is a dimension node,
+        placeholder descriptions` file in the `nodes/` directory.
+- `DIM_CUSTOMERS_RS_3`:
+        This is a dimension node,
+        placeholder descriptions` file in the `nodes/` directory.
+- `CTE_PAYMENTS_FCT_1`:
         This is a Others node,
         placeholder descriptions` file in the `nodes/` directory.
-- `LINK_CUSTOMER_NATION`:
+- `STG_CUSTOMERS`:
         This is a Others node,
         placeholder descriptions` file in the `nodes/` directory.
-- `SAT_ORDER_ORDER_DETAILS`:
+- `FCT_ORDERS_RS_3`:
+        This is a fact node,
+        placeholder descriptions` file in the `nodes/` directory.
+- `INT_ORDERS_PIVOTED_RS_2`:
+        This is a intermediate node,
+        placeholder descriptions` file in the `nodes/` directory.
+- `INT_ORDERS_PIVOTED`:
+        This is a intermediate node,
+        placeholder descriptions` file in the `nodes/` directory.
+- `CTE_CUSTOMERS_DIM_1`:
         This is a Others node,
         placeholder descriptions` file in the `nodes/` directory.
-- `HUB_NATION`:
+- `FCT_ORDERS`:
+        This is a fact node,
+        placeholder descriptions` file in the `nodes/` directory.
+- `JAFFLE_SHOP_CUSTOMERS`:
         This is a Others node,
         placeholder descriptions` file in the `nodes/` directory.
-- `HUB_REGION`:
+- `CTE_ORDER_PAYMENTS_FCT_1`:
         This is a Others node,
         placeholder descriptions` file in the `nodes/` directory.
-- `HUB_PART`:
+- `STG_PAYMENTS`:
         This is a Others node,
         placeholder descriptions` file in the `nodes/` directory.
-- `LINK_ORDER_LINEITEM`:
+- `STG_ORDERS`:
         This is a Others node,
         placeholder descriptions` file in the `nodes/` directory.
-- `LINK_CUSTOMER_ORDER`:
+- `CTE_FINAL_1`:
         This is a Others node,
         placeholder descriptions` file in the `nodes/` directory.
-- `SAT_INV_SUPPLIER_DETAILS`:
+- `CTE_ORDERS_FCT_1`:
         This is a Others node,
         placeholder descriptions` file in the `nodes/` directory.
-- `HUB_CUSTOMER`:
+- `CTE_FINAL_FCT_1`:
         This is a Others node,
         placeholder descriptions` file in the `nodes/` directory.
-- `SAT_INV_PART_DETAILS`:
-        This is a Others node,
-        placeholder descriptions` file in the `nodes/` directory.
-- `SAT_INV_SUPP_NATION_DETAILS`:
-        This is a Others node,
-        placeholder descriptions` file in the `nodes/` directory.
-- `SAT_INV_INVENTORY_DETAILS`:
-        This is a Others node,
-        placeholder descriptions` file in the `nodes/` directory.
-- `SAT_ORDER_CUSTOMER_DETAILS`:
-        This is a Others node,
-        placeholder descriptions` file in the `nodes/` directory.
-- `LINK_INVENTORY_ALLOCATION`:
-        This is a Others node,
-        placeholder descriptions` file in the `nodes/` directory.
-- `HUB_SUPPLIER`:
-        This is a Others node,
-        placeholder descriptions` file in the `nodes/` directory.
-- `LINK_NATION_REGION`:
-        This is a Others node,
-        placeholder descriptions` file in the `nodes/` directory.
-- `LINK_INVENTORY`:
-        This is a Others node,
-        placeholder descriptions` file in the `nodes/` directory.
-- `LINK_SUPPLIER_NATION`:
+- `CTE_ORDERS_DIM_1`:
         This is a Others node,
         placeholder descriptions` file in the `nodes/` directory.
     ## :book: Node Types in `data.yml` :book:
