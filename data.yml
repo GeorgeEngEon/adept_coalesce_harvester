@@ -26,6 +26,45 @@ locations:
         database: ''
         schema: ''
 macros:
+  Macro-not_empty_string:
+    id: not_empty_string
+    macroString: |-
+      {% macro not_empty_string(node, column_name, trim_whitespace=True) %}
+      
+      WITH all_values AS (
+          SELECT 
+              {% if trim_whitespace %}
+                  TRIM({{ column_name }}) AS {{ column_name }}
+              {% else %}
+                  {{ column_name }}
+              {% endif %}
+          FROM {{ node }}
+      ),
+      
+      errors AS (
+          SELECT * 
+          FROM all_values
+          WHERE {{ column_name }} = ''
+      )
+      
+      SELECT * FROM errors
+      
+      {% endmacro %}
+  Macro-expression_is_true:
+    id: expression_is_true
+    macroString: |-
+      {% macro expression_is_true(node, expression, column_name=None) %}
+      
+      SELECT
+          *
+      FROM {{ node }}
+      {% if column_name is none %}
+      WHERE NOT ({{ expression }})
+      {%- else %}
+      WHERE NOT ({{ column_name }} {{ expression }})
+      {%- endif %}
+      
+      {% endmacro %}
   Macro-equal_rowcount:
     id: equal_rowcount
     macroString: |-
@@ -85,48 +124,6 @@ macros:
       select * from final
       
       {% endmacro %}
-      
-  Macro-not_empty_string:
-    id: not_empty_string
-    macroString: |-
-      {% macro not_empty_string(node, column_name, trim_whitespace=True) %}
-      
-      WITH all_values AS (
-          SELECT
-              {% if trim_whitespace %}
-                  TRIM({{ column_name }}) AS {{ column_name }}
-              {% else %}
-                  {{ column_name }}
-              {% endif %}
-          FROM {{ node }}
-      ),
-      
-      errors AS (
-          SELECT *
-          FROM all_values
-          WHERE {{ column_name }} = ''
-      )
-      
-      SELECT * FROM errors
-      
-      {% endmacro %}
-      
-  Macro-expression_is_true:
-    id: expression_is_true
-    macroString: |-
-      {% macro expression_is_true(node, expression, column_name=None) %}
-      
-      SELECT
-          *
-      FROM {{ node }}
-      {% if column_name is none %}
-      WHERE NOT ({{ expression }})
-      {%- else %}
-      WHERE NOT ({{ column_name }} {{ expression }})
-      {%- endif %}
-      
-      {% endmacro %}
-      
 
 packages: {}
 projects: {}
