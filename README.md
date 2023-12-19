@@ -77,15 +77,6 @@ data migration and processing tasks.
 - `FCT_ORDERS_RS_5`:
         This is a fact node,
         placeholder descriptions` file in the `nodes/` directory.
-- `INT_CUSTOMERS`:
-        This is a intermediate node,
-        placeholder descriptions` file in the `nodes/` directory.
-- `INT_CUSTOMERS_RS_1`:
-        This is a intermediate node,
-        placeholder descriptions` file in the `nodes/` directory.
-- `INT_ORDERS`:
-        This is a intermediate node,
-        placeholder descriptions` file in the `nodes/` directory.
 - `INT_ORDERS_PIVOTED`:
         This is a intermediate node,
         placeholder descriptions` file in the `nodes/` directory.
@@ -98,9 +89,6 @@ data migration and processing tasks.
 - `INT_ORDERS_PIVOTED_RS_3`:
         This is a intermediate node,
         placeholder descriptions` file in the `nodes/` directory.
-- `INT_ORDERS_RS_1`:
-        This is a intermediate node,
-        placeholder descriptions` file in the `nodes/` directory.
 - `JAFFLE_SHOP_CUSTOMERS`:
         This is a Others node,
         placeholder descriptions` file in the `nodes/` directory.
@@ -110,22 +98,10 @@ data migration and processing tasks.
 - `STG_CUSTOMERS`:
         This is a Others node,
         placeholder descriptions` file in the `nodes/` directory.
-- `STG_CUSTOMER_ID_0_50`:
-        This is a Others node,
-        placeholder descriptions` file in the `nodes/` directory.
-- `STG_CUSTOMER_ID_51_100`:
-        This is a Others node,
-        placeholder descriptions` file in the `nodes/` directory.
 - `STG_ORDERS`:
         This is a Others node,
         placeholder descriptions` file in the `nodes/` directory.
-- `STG_ORDERS_BY_MONTH`:
-        This is a Others node,
-        placeholder descriptions` file in the `nodes/` directory.
 - `STG_PAYMENTS`:
-        This is a Others node,
-        placeholder descriptions` file in the `nodes/` directory.
-- `STG_UNION_CUST_COUNT`:
         This is a Others node,
         placeholder descriptions` file in the `nodes/` directory.
 - `STRIPE_PAYMENT`:
