@@ -1,0 +1,56 @@
+steps:
+  STG_CUSTOMER_ID_0_50_CTE_USER_COUNT_1-57a628ea8b720be72b9f3538fd84a68bb92f991d2d2ef6d9b27af1b5170a6709:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: true
+      locationName: BI
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 23049fd45854f7be8af192040f2845efeca370f0dd3df475003b70b4c823bd76
+              stepCounter: 57a628ea8b720be72b9f3538fd84a68bb92f991d2d2ef6d9b27af1b5170a6709
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CUSTOMER_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ee09f35804bbb0fab7e89f79bca4912cc49f84ce87edf46252b2be90b2ddd04e
+                    stepCounter: 1257b192abe96c73c3d43ff7566966203ff0f63758b6e813348cfc44f4f5a956
+                transform: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: BI
+                nodeName: STG_CUSTOMER_ID_0_50_RS_1
+            join:
+                joinCondition: FROM {{ ref('BI', 'STG_CUSTOMER_ID_0_50_RS_1') }} "STG_CUSTOMER_ID_0_50_RS_1"
+            name: STG_CUSTOMER_ID_0_50_CTE_USER_COUNT_1
+            noLinkRefs: []
+      name: STG_CUSTOMER_ID_0_50_CTE_USER_COUNT_1
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 57a628ea8b720be72b9f3538fd84a68bb92f991d2d2ef6d9b27af1b5170a6709
