@@ -63,12 +63,9 @@ steps:
               customSQL: ""
             dependencies:
               - locationName: DBT_GGITHIRI
-                nodeName: CTE_ORDERS_FCT_1
+                nodeName: FCT_ORDERS_CTE_ORDERS_FCT_1
             join:
-                joinCondition: |-
-                  FROM {{ ref('DBT_GGITHIRI', 'CTE_ORDERS_FCT_1') }} "CTE_ORDERS_FCT_1"
-                  LEFT JOIN {{ ref('DBT_GGITHIRI', 'FCT_ORDERS_RS_3') }} "FCT_ORDERS_RS_3" 
-                  ON "CTE_ORDERS_FCT_1"."ORDER_ID" = "FCT_ORDERS_RS_3"."ORDER_ID"
+                joinCondition: FROM {{ ref('DBT_GGITHIRI', 'FCT_ORDERS_CTE_ORDERS_FCT_1') }} "FCT_ORDERS_CTE_ORDERS_FCT_1"
             name: FCT_ORDERS_RS_3
             noLinkRefs: []
       name: FCT_ORDERS_RS_3

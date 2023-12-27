@@ -123,9 +123,9 @@ steps:
               customSQL: ""
             dependencies:
               - locationName: DBT_GGITHIRI
-                nodeName: CTE_PAYMENTS_1
+                nodeName: INT_ORDERS__PIVOTED_CTE_PAYMENTS_1
             join:
-                joinCondition: FROM {{ ref('DBT_GGITHIRI', 'CTE_PAYMENTS_1') }} "CTE_PAYMENTS_1"
+                joinCondition: FROM {{ ref('DBT_GGITHIRI', 'INT_ORDERS__PIVOTED_CTE_PAYMENTS_1') }} "INT_ORDERS__PIVOTED_CTE_PAYMENTS_1"
             name: INT_ORDERS__PIVOTED_RS_2
             noLinkRefs: []
       name: INT_ORDERS__PIVOTED_RS_2

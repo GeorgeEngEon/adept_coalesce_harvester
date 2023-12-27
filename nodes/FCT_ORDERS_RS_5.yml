@@ -103,9 +103,9 @@ steps:
               customSQL: ""
             dependencies:
               - locationName: DBT_GGITHIRI
-                nodeName: CTE_FINAL_FCT_1
+                nodeName: FCT_ORDERS_CTE_FINAL_FCT_1
             join:
-                joinCondition: FROM {{ ref('DBT_GGITHIRI', 'CTE_FINAL_FCT_1') }} "CTE_FINAL_FCT_1"
+                joinCondition: FROM {{ ref('DBT_GGITHIRI', 'FCT_ORDERS_CTE_FINAL_FCT_1') }} "FCT_ORDERS_CTE_FINAL_FCT_1"
             name: FCT_ORDERS_RS_5
             noLinkRefs: []
       name: FCT_ORDERS_RS_5

@@ -1,5 +1,5 @@
 steps:
-  CTE_ORDER_PAYMENTS_FCT_1-9d813b61d89f0e792b15c58bcb0cececbc124830f184683b3939bdd8ed948eb3:
+  FCT_ORDERS_CTE_ORDER_PAYMENTS_FCT_1-9d813b61d89f0e792b15c58bcb0cececbc124830f184683b3939bdd8ed948eb3:
     operation:
       config:
         insertStrategy: INSERT
@@ -66,9 +66,9 @@ steps:
                 nodeName: FCT_ORDERS_RS_3
             join:
                 joinCondition: FROM {{ ref('DBT_GGITHIRI', 'FCT_ORDERS_RS_3') }} "FCT_ORDERS_RS_3"
-            name: CTE_ORDER_PAYMENTS_FCT_1
+            name: FCT_ORDERS_CTE_ORDER_PAYMENTS_FCT_1
             noLinkRefs: []
-      name: CTE_ORDER_PAYMENTS_FCT_1
+      name: FCT_ORDERS_CTE_ORDER_PAYMENTS_FCT_1
       overrideSQL: false
       schema: ""
       sqlType: Stage

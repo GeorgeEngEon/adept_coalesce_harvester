@@ -1,5 +1,5 @@
 steps:
-  CTE_CUSTOMERS_DIM_1-550ec08da16546559d594b1c3cacfeac9a5b3c7c76f1560d875c1e6465f54195:
+  DIM_CUSTOMERS_CTE_CUSTOMERS_DIM_1-550ec08da16546559d594b1c3cacfeac9a5b3c7c76f1560d875c1e6465f54195:
     operation:
       config:
         insertStrategy: INSERT
@@ -86,9 +86,9 @@ steps:
                 nodeName: DIM_CUSTOMERS_RS_1
             join:
                 joinCondition: FROM {{ ref('DBT_GGITHIRI', 'DIM_CUSTOMERS_RS_1') }} "DIM_CUSTOMERS_RS_1"
-            name: CTE_CUSTOMERS_DIM_1
+            name: DIM_CUSTOMERS_CTE_CUSTOMERS_DIM_1
             noLinkRefs: []
-      name: CTE_CUSTOMERS_DIM_1
+      name: DIM_CUSTOMERS_CTE_CUSTOMERS_DIM_1
       overrideSQL: false
       schema: ""
       sqlType: Stage
