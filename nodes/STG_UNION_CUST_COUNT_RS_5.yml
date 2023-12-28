@@ -1,0 +1,56 @@
+steps:
+  STG_UNION_CUST_COUNT_RS_5-ca70dd32fa8b5d402a262e8904a97a3504fa86c946e21ccc535ee2b9c2839500:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: true
+      locationName: BI
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 151c50ed3346c233f67c81900a90f09eafc045fc96801fc3134df1fc9313502d
+              stepCounter: ca70dd32fa8b5d402a262e8904a97a3504fa86c946e21ccc535ee2b9c2839500
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SOURCE_NUMBER
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e6dc297642f909323b0b3ccc655d33187f31e6bc7d5299c35f8a4157a81e6843
+                    stepCounter: c97aea6e8f7f07a66267922dd2e5557e6cb11566500b8c91ffe35015f08c99b8
+                transform: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: BI
+                nodeName: STG_UNION_CUST_COUNT_CTE_FINAL_1
+            join:
+                joinCondition: FROM {{ ref('BI', 'STG_UNION_CUST_COUNT_CTE_FINAL_1') }} "STG_UNION_CUST_COUNT_CTE_FINAL_1"
+            name: STG_UNION_CUST_COUNT_RS_5
+            noLinkRefs: []
+      name: STG_UNION_CUST_COUNT_RS_5
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: ca70dd32fa8b5d402a262e8904a97a3504fa86c946e21ccc535ee2b9c2839500

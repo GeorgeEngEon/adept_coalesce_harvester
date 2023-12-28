@@ -1,0 +1,56 @@
+steps:
+  STG_CUSTOMER_ID_0_50_RS_1-1257b192abe96c73c3d43ff7566966203ff0f63758b6e813348cfc44f4f5a956:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: true
+      locationName: BI
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: ee09f35804bbb0fab7e89f79bca4912cc49f84ce87edf46252b2be90b2ddd04e
+              stepCounter: 1257b192abe96c73c3d43ff7566966203ff0f63758b6e813348cfc44f4f5a956
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CUSTOMER_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7830ddac62863d741e8a0b28184b8feb65ed53f739101e829ca20e117a8f05a4
+                    stepCounter: c9d2541d06a3c71a72e659d0e5f39b7d526a6ede4fa6d067206b94260ba3cfaa
+                transform: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: BI
+                nodeName: STG_ORDERS_BY_MONTH
+            join:
+                joinCondition: FROM {{ ref('BI', 'STG_ORDERS_BY_MONTH') }} "STG_ORDERS_BY_MONTH"
+            name: STG_CUSTOMER_ID_0_50_RS_1
+            noLinkRefs: []
+      name: STG_CUSTOMER_ID_0_50_RS_1
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 1257b192abe96c73c3d43ff7566966203ff0f63758b6e813348cfc44f4f5a956
