@@ -1,5 +1,5 @@
 steps:
-  STG_CUSTOMERS-d2e3b16dd518fc5a30ac4fe0227b092e053968697743a2d84210fcf060f9a611:
+  DIM_CUSTOMERS_CTE_ORDERS_DIM_1-30b7387e9519c0188a8737facc1ec6200e985df2a32f8aa0f5129904ae90c90c:
     operation:
       config:
         insertStrategy: INSERT
@@ -21,11 +21,31 @@ steps:
               strictMatch: true
               values: []
             appliedColumnTests:
-              hasNull: false
-              isDistinct: true
+              hasNull: true
+              isDistinct: false
             columnReference:
-              columnCounter: 17c6b7408023b0969958e2b87e7127682860c40d4539c85a680a91798a9c711e
-              stepCounter: d2e3b16dd518fc5a30ac4fe0227b092e053968697743a2d84210fcf060f9a611
+              columnCounter: 65dcd8b44a26cd65506b0889604a33a790be03bf48bd2c1aeb61203d8818b01a
+              stepCounter: 30b7387e9519c0188a8737facc1ec6200e985df2a32f8aa0f5129904ae90c90c
+            dataType: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: AMOUNT
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 254e027f31e8654b5ccba5fc408c10e738315099b203eac8a3f90b584ac26a16
+                    stepCounter: 286ca2e9df7252c7248a8be688e823b511e8a4128f66c617ec808fee814f329b
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: eaa8fdf41443834bc49c34ab32ccac9206e4f0b523d3950704a80e8e9a6fcad3
+              stepCounter: 30b7387e9519c0188a8737facc1ec6200e985df2a32f8aa0f5129904ae90c90c
             dataType: ""
             description: ""
             hashColumns: []
@@ -34,8 +54,8 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 339ffa61e5fbd68b1038d9ebab2e880f71a98d2d3d6fbb078814e5d91e5b3ea3
-                    stepCounter: 175075184946b715adc96b32e5ac3cb7cbb58fabc3154374909c66465eee817b
+                  - columnCounter: 3b171170b65e41d32049a9cd3a8d9a71081028c57f159bf120c13d39794f43f9
+                    stepCounter: 286ca2e9df7252c7248a8be688e823b511e8a4128f66c617ec808fee814f329b
                 transform: ""
           - acceptedValues:
               strictMatch: true
@@ -44,18 +64,18 @@ steps:
               hasNull: true
               isDistinct: false
             columnReference:
-              columnCounter: 8054ec8dcf6506c8260bcc7dc7e0ce9adec76ad1becec9170100e64dbaae2380
-              stepCounter: d2e3b16dd518fc5a30ac4fe0227b092e053968697743a2d84210fcf060f9a611
+              columnCounter: 8f2168f03721a338c45a9a53a455ae013e82257f4c08fd96cf62002fc7ac54bf
+              stepCounter: 30b7387e9519c0188a8737facc1ec6200e985df2a32f8aa0f5129904ae90c90c
             dataType: ""
             description: ""
             hashColumns: []
             hashDetails: null
-            name: *
+            name: ORDER_DATE
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: No source_counter
-                    stepCounter: 175075184946b715adc96b32e5ac3cb7cbb58fabc3154374909c66465eee817b
+                  - columnCounter: 5e165b17d3424ecfa0aa093c1c563a3023fd5fea75b1ef3fc80c168cdc34a08a
+                    stepCounter: 286ca2e9df7252c7248a8be688e823b511e8a4128f66c617ec808fee814f329b
                 transform: ""
           - acceptedValues:
               strictMatch: true
@@ -64,54 +84,33 @@ steps:
               hasNull: true
               isDistinct: false
             columnReference:
-              columnCounter: e149de0c8d762521e2f879d447d99e08c19e07c0862c5726d3baa46f9de4e6ba
-              stepCounter: d2e3b16dd518fc5a30ac4fe0227b092e053968697743a2d84210fcf060f9a611
+              columnCounter: 97d56fad567aad90f83068830374530c8baebd80f8f914c902fd41d51a131203
+              stepCounter: 30b7387e9519c0188a8737facc1ec6200e985df2a32f8aa0f5129904ae90c90c
             dataType: ""
             description: ""
             hashColumns: []
             hashDetails: null
-            name: FIRST_NAME
+            name: ORDER_ID
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 0079f090a6555a229475573be9e97b8492a428469fc0160c29a212817a59a077
-                    stepCounter: 175075184946b715adc96b32e5ac3cb7cbb58fabc3154374909c66465eee817b
+                  - columnCounter: 9aefcd8e9307f3112b1ac548c8b962cebeba422e7c614ba98ab881cfcd09ac1e
+                    stepCounter: 286ca2e9df7252c7248a8be688e823b511e8a4128f66c617ec808fee814f329b
                 transform: ""
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests:
-              hasNull: true
-              isDistinct: false
-            columnReference:
-              columnCounter: a873adafd5ec543792f2ff93581d8e208fb05e7d7678d1680739b377f733ff12
-              stepCounter: d2e3b16dd518fc5a30ac4fe0227b092e053968697743a2d84210fcf060f9a611
-            dataType: ""
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: LAST_NAME
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 426106e68bb8f6e389c1d92c77f5fe20de79a688fc22fe74ff75c0d62b90551e
-                    stepCounter: 175075184946b715adc96b32e5ac3cb7cbb58fabc3154374909c66465eee817b
-                transform: ""
-        cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
           - customSQL:
               customSQL: ""
             dependencies:
-              - locationName: JAFFLE_SHOP
-                nodeName: CUSTOMERS
+              - locationName: DBT_GGITHIRI
+                nodeName: DIM_CUSTOMERS_RS_2
             join:
-                joinCondition: FROM {{ ref('JAFFLE_SHOP', 'CUSTOMERS') }} "CUSTOMERS"
-            name: STG_CUSTOMERS
+                joinCondition: FROM {{ ref('DBT_GGITHIRI', 'DIM_CUSTOMERS_RS_2') }} "DIM_CUSTOMERS_RS_2"
+            name: DIM_CUSTOMERS_CTE_ORDERS_DIM_1
             noLinkRefs: []
-      name: STG_CUSTOMERS
+      name: DIM_CUSTOMERS_CTE_ORDERS_DIM_1
       overrideSQL: false
       schema: ""
       sqlType: Stage
       type: sql
-    stepCounter: d2e3b16dd518fc5a30ac4fe0227b092e053968697743a2d84210fcf060f9a611
+    stepCounter: 30b7387e9519c0188a8737facc1ec6200e985df2a32f8aa0f5129904ae90c90c
